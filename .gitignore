@@ -12,3 +12,6 @@ venv/
 06_linkedin/.build/
 06_linkedin/.poster/
 03_dashboard/.hero_*.html
+
+# Personal working drafts (kept on disk, out of the repo)
+06_linkedin/*.docx
