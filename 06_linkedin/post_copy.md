@@ -95,7 +95,7 @@ and someone in your comments will ask.
 >
 > The fix was one line: add usage − baseline > 0.30 kWh beside the ratio rule.
 >
-> Python + pandas, delivered as one self-contained HTML dashboard. Write-up in the comments.
+> Python + pandas, delivered as one self-contained HTML dashboard. Code and write-up in the comments.
 >
 > #DataAnalytics #Python #DataVisualization #EnergyData
 
@@ -104,7 +104,10 @@ and someone in your comments will ask.
 ## Version 3 — opening comment (post this yourself, right after publishing)
 
 > Full write-up, the data-quality log (13 issues in the source extract, including two
-> different date formats in the same file), and the reproducible pipeline: [link]
+> different date formats in the same file), and the reproducible pipeline — code, data and
+> the dashboard file itself:
+>
+> https://github.com/Rexxxie/novagrid-energy-spike-detection
 >
 > Happy to talk through the detection logic with anyone working on anomaly rules — the
 > ratio-vs-absolute trade-off shows up well beyond energy.
