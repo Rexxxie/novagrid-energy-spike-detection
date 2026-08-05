@@ -1,0 +1,9070 @@
+{
+  "by_region": [
+    {
+      "region": "Bristol",
+      "readings": 672,
+      "households": 2,
+      "spikes": 7,
+      "resolved": 5,
+      "excess_kwh": 1.5,
+      "median_latency": 14.8,
+      "spikes_per_household": 3.5,
+      "resolution_rate": 71.42857142857143
+    },
+    {
+      "region": "Glasgow",
+      "readings": 672,
+      "households": 2,
+      "spikes": 13,
+      "resolved": 12,
+      "excess_kwh": 2.64,
+      "median_latency": 21.0,
+      "spikes_per_household": 6.5,
+      "resolution_rate": 92.3076923076923
+    },
+    {
+      "region": "Leeds",
+      "readings": 2016,
+      "households": 6,
+      "spikes": 42,
+      "resolved": 30,
+      "excess_kwh": 9.02,
+      "median_latency": 11.8,
+      "spikes_per_household": 7.0,
+      "resolution_rate": 71.42857142857143
+    },
+    {
+      "region": "London",
+      "readings": 2016,
+      "households": 6,
+      "spikes": 31,
+      "resolved": 19,
+      "excess_kwh": 5.78,
+      "median_latency": 15.6,
+      "spikes_per_household": 5.17,
+      "resolution_rate": 61.29032258064516
+    },
+    {
+      "region": "Manchester",
+      "readings": 1344,
+      "households": 4,
+      "spikes": 21,
+      "resolved": 11,
+      "excess_kwh": 4.15,
+      "median_latency": 9.4,
+      "spikes_per_household": 5.25,
+      "resolution_rate": 52.38095238095239
+    }
+  ],
+  "by_reason": [
+    {
+      "reason_detected": "Guest visit",
+      "spikes": 20,
+      "resolved": 10,
+      "excess_kwh": 4.36,
+      "mean_excess_pct": 55.74,
+      "category": "Behavioural",
+      "resolution_rate": 50.0
+    },
+    {
+      "reason_detected": "Heater malfunction",
+      "spikes": 31,
+      "resolved": 23,
+      "excess_kwh": 6.13,
+      "mean_excess_pct": 49.83,
+      "category": "Appliance",
+      "resolution_rate": 74.19354838709677
+    },
+    {
+      "reason_detected": "Overnight appliance",
+      "spikes": 32,
+      "resolved": 23,
+      "excess_kwh": 6.61,
+      "mean_excess_pct": 51.77,
+      "category": "Appliance",
+      "resolution_rate": 71.875
+    },
+    {
+      "reason_detected": "Schedule change",
+      "spikes": 30,
+      "resolved": 21,
+      "excess_kwh": 6.05,
+      "mean_excess_pct": 51.0,
+      "category": "Behavioural",
+      "resolution_rate": 70.0
+    }
+  ],
+  "by_hour": [
+    {
+      "hour": 0,
+      "mean_kwh": 0.769,
+      "spikes": 7
+    },
+    {
+      "hour": 1,
+      "mean_kwh": 0.764,
+      "spikes": 6
+    },
+    {
+      "hour": 2,
+      "mean_kwh": 0.693,
+      "spikes": 5
+    },
+    {
+      "hour": 3,
+      "mean_kwh": 0.693,
+      "spikes": 10
+    },
+    {
+      "hour": 4,
+      "mean_kwh": 0.742,
+      "spikes": 3
+    },
+    {
+      "hour": 5,
+      "mean_kwh": 0.736,
+      "spikes": 2
+    },
+    {
+      "hour": 6,
+      "mean_kwh": 0.711,
+      "spikes": 5
+    },
+    {
+      "hour": 7,
+      "mean_kwh": 0.755,
+      "spikes": 2
+    },
+    {
+      "hour": 8,
+      "mean_kwh": 0.778,
+      "spikes": 3
+    },
+    {
+      "hour": 9,
+      "mean_kwh": 0.763,
+      "spikes": 4
+    },
+    {
+      "hour": 10,
+      "mean_kwh": 0.727,
+      "spikes": 6
+    },
+    {
+      "hour": 11,
+      "mean_kwh": 0.737,
+      "spikes": 2
+    },
+    {
+      "hour": 12,
+      "mean_kwh": 0.729,
+      "spikes": 8
+    },
+    {
+      "hour": 13,
+      "mean_kwh": 0.768,
+      "spikes": 5
+    },
+    {
+      "hour": 14,
+      "mean_kwh": 0.726,
+      "spikes": 1
+    },
+    {
+      "hour": 15,
+      "mean_kwh": 0.749,
+      "spikes": 5
+    },
+    {
+      "hour": 16,
+      "mean_kwh": 0.742,
+      "spikes": 5
+    },
+    {
+      "hour": 17,
+      "mean_kwh": 0.758,
+      "spikes": 6
+    },
+    {
+      "hour": 18,
+      "mean_kwh": 0.751,
+      "spikes": 6
+    },
+    {
+      "hour": 19,
+      "mean_kwh": 0.736,
+      "spikes": 3
+    },
+    {
+      "hour": 20,
+      "mean_kwh": 0.76,
+      "spikes": 5
+    },
+    {
+      "hour": 21,
+      "mean_kwh": 0.726,
+      "spikes": 4
+    },
+    {
+      "hour": 22,
+      "mean_kwh": 0.75,
+      "spikes": 7
+    },
+    {
+      "hour": 23,
+      "mean_kwh": 0.737,
+      "spikes": 4
+    }
+  ],
+  "by_day": [
+    {
+      "date": "2024-01-01",
+      "total_kwh": 706.1,
+      "spikes": 19
+    },
+    {
+      "date": "2024-01-02",
+      "total_kwh": 710.05,
+      "spikes": 13
+    },
+    {
+      "date": "2024-01-03",
+      "total_kwh": 706.48,
+      "spikes": 16
+    },
+    {
+      "date": "2024-01-04",
+      "total_kwh": 718.42,
+      "spikes": 19
+    },
+    {
+      "date": "2024-01-05",
+      "total_kwh": 714.96,
+      "spikes": 21
+    },
+    {
+      "date": "2024-01-06",
+      "total_kwh": 705.52,
+      "spikes": 9
+    },
+    {
+      "date": "2024-01-07",
+      "total_kwh": 723.55,
+      "spikes": 17
+    }
+  ],
+  "households": [
+    {
+      "customer_id": "CUST006",
+      "customer_name": "Hilary Reynolds",
+      "region": "Leeds",
+      "housing_type": "Flat",
+      "readings": 336,
+      "total_kwh": 248.77,
+      "mean_baseline_kwh": 0.73,
+      "detection_coverage": 82.44,
+      "spikes": 11,
+      "fault_spikes": 9,
+      "excess_kwh": 2.38,
+      "excess_cost_gbp": 0.68,
+      "max_excess_pct": 73.68,
+      "median_alert_latency_min": 16.6,
+      "resolved": 7,
+      "spike_rate_pct": 3.27,
+      "unresolved": 4,
+      "resolution_rate_pct": 63.63636363636363,
+      "priority_score": 46
+    },
+    {
+      "customer_id": "CUST008",
+      "customer_name": "Miss Tracy Lamb",
+      "region": "London",
+      "housing_type": "Detached",
+      "readings": 336,
+      "total_kwh": 248.38,
+      "mean_baseline_kwh": 0.74,
+      "detection_coverage": 81.85,
+      "spikes": 7,
+      "fault_spikes": 6,
+      "excess_kwh": 1.37,
+      "excess_cost_gbp": 0.39,
+      "max_excess_pct": 65.71,
+      "median_alert_latency_min": 18.0,
+      "resolved": 4,
+      "spike_rate_pct": 2.08,
+      "unresolved": 3,
+      "resolution_rate_pct": 57.14285714285714,
+      "priority_score": 31
+    },
+    {
+      "customer_id": "CUST020",
+      "customer_name": "Joseph Nelson-White",
+      "region": "Glasgow",
+      "housing_type": "Detached",
+      "readings": 336,
+      "total_kwh": 252.68,
+      "mean_baseline_kwh": 0.75,
+      "detection_coverage": 80.95,
+      "spikes": 10,
+      "fault_spikes": 6,
+      "excess_kwh": 2.08,
+      "excess_cost_gbp": 0.6,
+      "max_excess_pct": 70.73,
+      "median_alert_latency_min": 20.9,
+      "resolved": 9,
+      "spike_rate_pct": 2.98,
+      "unresolved": 1,
+      "resolution_rate_pct": 90.0,
+      "priority_score": 30
+    },
+    {
+      "customer_id": "CUST011",
+      "customer_name": "Alan Thompson",
+      "region": "Leeds",
+      "housing_type": "Detached",
+      "readings": 336,
+      "total_kwh": 247.58,
+      "mean_baseline_kwh": 0.74,
+      "detection_coverage": 83.63,
+      "spikes": 8,
+      "fault_spikes": 5,
+      "excess_kwh": 1.54,
+      "excess_cost_gbp": 0.44,
+      "max_excess_pct": 62.86,
+      "median_alert_latency_min": 11.2,
+      "resolved": 6,
+      "spike_rate_pct": 2.38,
+      "unresolved": 2,
+      "resolution_rate_pct": 75.0,
+      "priority_score": 27
+    },
+    {
+      "customer_id": "CUST005",
+      "customer_name": "George Price",
+      "region": "Leeds",
+      "housing_type": "Detached",
+      "readings": 336,
+      "total_kwh": 249.93,
+      "mean_baseline_kwh": 0.75,
+      "detection_coverage": 79.17,
+      "spikes": 8,
+      "fault_spikes": 3,
+      "excess_kwh": 1.59,
+      "excess_cost_gbp": 0.46,
+      "max_excess_pct": 70.0,
+      "median_alert_latency_min": 11.0,
+      "resolved": 4,
+      "spike_rate_pct": 2.38,
+      "unresolved": 4,
+      "resolution_rate_pct": 50.0,
+      "priority_score": 25
+    },
+    {
+      "customer_id": "CUST013",
+      "customer_name": "Ms Jacqueline Baker",
+      "region": "Manchester",
+      "housing_type": "Flat",
+      "readings": 336,
+      "total_kwh": 244.38,
+      "mean_baseline_kwh": 0.72,
+      "detection_coverage": 80.95,
+      "spikes": 6,
+      "fault_spikes": 4,
+      "excess_kwh": 1.02,
+      "excess_cost_gbp": 0.29,
+      "max_excess_pct": 47.5,
+      "median_alert_latency_min": 7.9,
+      "resolved": 4,
+      "spike_rate_pct": 1.79,
+      "unresolved": 2,
+      "resolution_rate_pct": 66.66666666666666,
+      "priority_score": 22
+    },
+    {
+      "customer_id": "CUST014",
+      "customer_name": "Miss Charlotte Robertson",
+      "region": "Leeds",
+      "housing_type": "Flat",
+      "readings": 336,
+      "total_kwh": 249.87,
+      "mean_baseline_kwh": 0.74,
+      "detection_coverage": 80.65,
+      "spikes": 6,
+      "fault_spikes": 4,
+      "excess_kwh": 1.5,
+      "excess_cost_gbp": 0.43,
+      "max_excess_pct": 60.53,
+      "median_alert_latency_min": 13.0,
+      "resolved": 4,
+      "spike_rate_pct": 1.79,
+      "unresolved": 2,
+      "resolution_rate_pct": 66.66666666666666,
+      "priority_score": 22
+    },
+    {
+      "customer_id": "CUST018",
+      "customer_name": "Ms Marie Morrison",
+      "region": "Manchester",
+      "housing_type": "Flat",
+      "readings": 336,
+      "total_kwh": 244.25,
+      "mean_baseline_kwh": 0.73,
+      "detection_coverage": 81.25,
+      "spikes": 7,
+      "fault_spikes": 3,
+      "excess_kwh": 1.52,
+      "excess_cost_gbp": 0.44,
+      "max_excess_pct": 96.67,
+      "median_alert_latency_min": 10.0,
+      "resolved": 4,
+      "spike_rate_pct": 2.08,
+      "unresolved": 3,
+      "resolution_rate_pct": 57.14285714285714,
+      "priority_score": 22
+    },
+    {
+      "customer_id": "CUST001",
+      "customer_name": "Shirley Thomas-Cox",
+      "region": "London",
+      "housing_type": "Detached",
+      "readings": 336,
+      "total_kwh": 248.96,
+      "mean_baseline_kwh": 0.73,
+      "detection_coverage": 81.55,
+      "spikes": 7,
+      "fault_spikes": 3,
+      "excess_kwh": 1.25,
+      "excess_cost_gbp": 0.37,
+      "max_excess_pct": 68.57,
+      "median_alert_latency_min": 15.7,
+      "resolved": 4,
+      "spike_rate_pct": 2.08,
+      "unresolved": 3,
+      "resolution_rate_pct": 57.14285714285714,
+      "priority_score": 22
+    },
+    {
+      "customer_id": "CUST015",
+      "customer_name": "Frederick Daniels",
+      "region": "London",
+      "housing_type": "Detached",
+      "readings": 336,
+      "total_kwh": 252.93,
+      "mean_baseline_kwh": 0.75,
+      "detection_coverage": 81.55,
+      "spikes": 4,
+      "fault_spikes": 3,
+      "excess_kwh": 0.74,
+      "excess_cost_gbp": 0.21,
+      "max_excess_pct": 57.58,
+      "median_alert_latency_min": 13.4,
+      "resolved": 1,
+      "spike_rate_pct": 1.19,
+      "unresolved": 3,
+      "resolution_rate_pct": 25.0,
+      "priority_score": 19
+    },
+    {
+      "customer_id": "CUST004",
+      "customer_name": "Samuel Ward",
+      "region": "London",
+      "housing_type": "Semi-Detached",
+      "readings": 336,
+      "total_kwh": 245.34,
+      "mean_baseline_kwh": 0.73,
+      "detection_coverage": 81.25,
+      "spikes": 6,
+      "fault_spikes": 3,
+      "excess_kwh": 0.98,
+      "excess_cost_gbp": 0.28,
+      "max_excess_pct": 54.84,
+      "median_alert_latency_min": 11.5,
+      "resolved": 5,
+      "spike_rate_pct": 1.79,
+      "unresolved": 1,
+      "resolution_rate_pct": 83.33333333333334,
+      "priority_score": 17
+    },
+    {
+      "customer_id": "CUST012",
+      "customer_name": "Sally Williams-Wilson",
+      "region": "Leeds",
+      "housing_type": "Flat",
+      "readings": 336,
+      "total_kwh": 248.04,
+      "mean_baseline_kwh": 0.74,
+      "detection_coverage": 84.23,
+      "spikes": 5,
+      "fault_spikes": 4,
+      "excess_kwh": 1.17,
+      "excess_cost_gbp": 0.33,
+      "max_excess_pct": 78.79,
+      "median_alert_latency_min": 24.0,
+      "resolved": 5,
+      "spike_rate_pct": 1.49,
+      "unresolved": 0,
+      "resolution_rate_pct": 100.0,
+      "priority_score": 17
+    },
+    {
+      "customer_id": "CUST009",
+      "customer_name": "Harry Bell",
+      "region": "Manchester",
+      "housing_type": "Semi-Detached",
+      "readings": 336,
+      "total_kwh": 246.17,
+      "mean_baseline_kwh": 0.73,
+      "detection_coverage": 80.06,
+      "spikes": 4,
+      "fault_spikes": 1,
+      "excess_kwh": 0.78,
+      "excess_cost_gbp": 0.22,
+      "max_excess_pct": 61.11,
+      "median_alert_latency_min": 14.3,
+      "resolved": 1,
+      "spike_rate_pct": 1.19,
+      "unresolved": 3,
+      "resolution_rate_pct": 25.0,
+      "priority_score": 13
+    },
+    {
+      "customer_id": "CUST002",
+      "customer_name": "Mr Guy Parsons",
+      "region": "Bristol",
+      "housing_type": "Detached",
+      "readings": 336,
+      "total_kwh": 255.4,
+      "mean_baseline_kwh": 0.77,
+      "detection_coverage": 80.36,
+      "spikes": 5,
+      "fault_spikes": 2,
+      "excess_kwh": 1.1,
+      "excess_cost_gbp": 0.31,
+      "max_excess_pct": 78.79,
+      "median_alert_latency_min": 16.8,
+      "resolved": 4,
+      "spike_rate_pct": 1.49,
+      "unresolved": 1,
+      "resolution_rate_pct": 80.0,
+      "priority_score": 13
+    },
+    {
+      "customer_id": "CUST003",
+      "customer_name": "Joel Jackson",
+      "region": "Manchester",
+      "housing_type": "Detached",
+      "readings": 336,
+      "total_kwh": 256.42,
+      "mean_baseline_kwh": 0.76,
+      "detection_coverage": 79.76,
+      "spikes": 4,
+      "fault_spikes": 1,
+      "excess_kwh": 0.83,
+      "excess_cost_gbp": 0.24,
+      "max_excess_pct": 67.5,
+      "median_alert_latency_min": 6.6,
+      "resolved": 2,
+      "spike_rate_pct": 1.19,
+      "unresolved": 2,
+      "resolution_rate_pct": 50.0,
+      "priority_score": 11
+    },
+    {
+      "customer_id": "CUST007",
+      "customer_name": "Mr Hugh Stephenson",
+      "region": "London",
+      "housing_type": "Detached",
+      "readings": 336,
+      "total_kwh": 249.19,
+      "mean_baseline_kwh": 0.75,
+      "detection_coverage": 80.36,
+      "spikes": 3,
+      "fault_spikes": 1,
+      "excess_kwh": 0.57,
+      "excess_cost_gbp": 0.16,
+      "max_excess_pct": 51.61,
+      "median_alert_latency_min": 14.8,
+      "resolved": 1,
+      "spike_rate_pct": 0.89,
+      "unresolved": 2,
+      "resolution_rate_pct": 33.33333333333333,
+      "priority_score": 10
+    },
+    {
+      "customer_id": "CUST010",
+      "customer_name": "Laura Richardson",
+      "region": "Leeds",
+      "housing_type": "Detached",
+      "readings": 336,
+      "total_kwh": 243.25,
+      "mean_baseline_kwh": 0.74,
+      "detection_coverage": 80.65,
+      "spikes": 4,
+      "fault_spikes": 2,
+      "excess_kwh": 0.84,
+      "excess_cost_gbp": 0.24,
+      "max_excess_pct": 54.29,
+      "median_alert_latency_min": 13.9,
+      "resolved": 4,
+      "spike_rate_pct": 1.19,
+      "unresolved": 0,
+      "resolution_rate_pct": 100.0,
+      "priority_score": 10
+    },
+    {
+      "customer_id": "CUST016",
+      "customer_name": "Miss Sian Hughes",
+      "region": "Glasgow",
+      "housing_type": "Flat",
+      "readings": 336,
+      "total_kwh": 252.92,
+      "mean_baseline_kwh": 0.76,
+      "detection_coverage": 77.98,
+      "spikes": 3,
+      "fault_spikes": 2,
+      "excess_kwh": 0.56,
+      "excess_cost_gbp": 0.16,
+      "max_excess_pct": 51.43,
+      "median_alert_latency_min": 23.2,
+      "resolved": 3,
+      "spike_rate_pct": 0.89,
+      "unresolved": 0,
+      "resolution_rate_pct": 100.0,
+      "priority_score": 9
+    },
+    {
+      "customer_id": "CUST019",
+      "customer_name": "Abigail Jordan",
+      "region": "London",
+      "housing_type": "Detached",
+      "readings": 336,
+      "total_kwh": 249.73,
+      "mean_baseline_kwh": 0.74,
+      "detection_coverage": 77.98,
+      "spikes": 4,
+      "fault_spikes": 1,
+      "excess_kwh": 0.87,
+      "excess_cost_gbp": 0.25,
+      "max_excess_pct": 93.55,
+      "median_alert_latency_min": 16.7,
+      "resolved": 4,
+      "spike_rate_pct": 1.19,
+      "unresolved": 0,
+      "resolution_rate_pct": 100.0,
+      "priority_score": 7
+    },
+    {
+      "customer_id": "CUST017",
+      "customer_name": "Molly Fisher",
+      "region": "Bristol",
+      "housing_type": "Detached",
+      "readings": 336,
+      "total_kwh": 250.89,
+      "mean_baseline_kwh": 0.74,
+      "detection_coverage": 82.74,
+      "spikes": 2,
+      "fault_spikes": 0,
+      "excess_kwh": 0.4,
+      "excess_cost_gbp": 0.11,
+      "max_excess_pct": 48.57,
+      "median_alert_latency_min": 5.2,
+      "resolved": 1,
+      "spike_rate_pct": 0.6,
+      "unresolved": 1,
+      "resolution_rate_pct": 50.0,
+      "priority_score": 4
+    }
+  ],
+  "scatter": {
+    "normal": [
+      [
+        0.42,
+        0.39
+      ],
+      [
+        0.57,
+        0.49
+      ],
+      [
+        1.01,
+        1.0
+      ],
+      [
+        1.17,
+        1.06
+      ],
+      [
+        0.38,
+        0.53
+      ],
+      [
+        1.16,
+        1.24
+      ],
+      [
+        1.07,
+        1.09
+      ],
+      [
+        0.69,
+        0.75
+      ],
+      [
+        0.4,
+        0.48
+      ],
+      [
+        0.43,
+        0.37
+      ],
+      [
+        0.71,
+        0.75
+      ],
+      [
+        0.36,
+        0.31
+      ],
+      [
+        0.37,
+        0.36
+      ],
+      [
+        1.0,
+        1.14
+      ],
+      [
+        0.85,
+        0.9
+      ],
+      [
+        0.98,
+        0.97
+      ],
+      [
+        1.17,
+        1.21
+      ],
+      [
+        0.92,
+        1.01
+      ],
+      [
+        0.66,
+        0.8
+      ],
+      [
+        0.58,
+        0.68
+      ],
+      [
+        0.48,
+        0.45
+      ],
+      [
+        0.63,
+        0.76
+      ],
+      [
+        1.14,
+        1.16
+      ],
+      [
+        0.94,
+        1.01
+      ],
+      [
+        0.81,
+        0.79
+      ],
+      [
+        0.59,
+        0.5
+      ],
+      [
+        0.95,
+        0.92
+      ],
+      [
+        1.04,
+        1.13
+      ],
+      [
+        1.13,
+        1.2
+      ],
+      [
+        1.03,
+        1.22
+      ],
+      [
+        0.97,
+        0.86
+      ],
+      [
+        1.01,
+        0.91
+      ],
+      [
+        0.58,
+        0.66
+      ],
+      [
+        0.38,
+        0.28
+      ],
+      [
+        0.33,
+        0.21
+      ],
+      [
+        0.5,
+        0.63
+      ],
+      [
+        0.33,
+        0.26
+      ],
+      [
+        0.41,
+        0.39
+      ],
+      [
+        0.46,
+        0.63
+      ],
+      [
+        0.48,
+        0.43
+      ],
+      [
+        0.41,
+        0.22
+      ],
+      [
+        0.54,
+        0.64
+      ],
+      [
+        0.85,
+        0.81
+      ],
+      [
+        0.58,
+        0.38
+      ],
+      [
+        0.39,
+        0.3
+      ],
+      [
+        0.61,
+        0.81
+      ],
+      [
+        0.94,
+        0.98
+      ],
+      [
+        1.06,
+        1.02
+      ],
+      [
+        0.46,
+        0.47
+      ],
+      [
+        0.44,
+        0.39
+      ],
+      [
+        0.38,
+        0.21
+      ],
+      [
+        0.41,
+        0.38
+      ],
+      [
+        0.75,
+        0.72
+      ],
+      [
+        0.81,
+        0.82
+      ],
+      [
+        1.04,
+        1.18
+      ],
+      [
+        0.58,
+        0.71
+      ],
+      [
+        0.52,
+        0.48
+      ],
+      [
+        0.98,
+        0.97
+      ],
+      [
+        0.99,
+        1.05
+      ],
+      [
+        1.11,
+        0.85
+      ],
+      [
+        1.12,
+        1.06
+      ],
+      [
+        0.46,
+        0.46
+      ],
+      [
+        0.65,
+        0.82
+      ],
+      [
+        0.89,
+        0.95
+      ],
+      [
+        0.4,
+        0.54
+      ],
+      [
+        1.2,
+        1.1
+      ],
+      [
+        1.02,
+        1.0
+      ],
+      [
+        1.12,
+        1.1
+      ],
+      [
+        1.05,
+        1.13
+      ],
+      [
+        1.19,
+        1.15
+      ],
+      [
+        0.49,
+        0.51
+      ],
+      [
+        1.19,
+        1.12
+      ],
+      [
+        0.65,
+        0.6
+      ],
+      [
+        0.32,
+        0.27
+      ],
+      [
+        0.4,
+        0.37
+      ],
+      [
+        0.86,
+        0.76
+      ],
+      [
+        0.33,
+        0.18
+      ],
+      [
+        0.67,
+        0.68
+      ],
+      [
+        1.02,
+        0.92
+      ],
+      [
+        0.94,
+        0.93
+      ],
+      [
+        0.84,
+        0.97
+      ],
+      [
+        0.51,
+        0.31
+      ],
+      [
+        0.5,
+        0.61
+      ],
+      [
+        0.34,
+        0.22
+      ],
+      [
+        1.19,
+        1.34
+      ],
+      [
+        1.13,
+        1.0
+      ],
+      [
+        1.1,
+        1.27
+      ],
+      [
+        0.91,
+        0.97
+      ],
+      [
+        0.45,
+        0.4
+      ],
+      [
+        0.64,
+        0.76
+      ],
+      [
+        0.84,
+        0.95
+      ],
+      [
+        0.88,
+        0.99
+      ],
+      [
+        0.67,
+        0.73
+      ],
+      [
+        0.4,
+        0.54
+      ],
+      [
+        0.51,
+        0.49
+      ],
+      [
+        0.81,
+        0.88
+      ],
+      [
+        0.46,
+        0.44
+      ],
+      [
+        1.18,
+        0.99
+      ],
+      [
+        0.62,
+        0.76
+      ],
+      [
+        0.87,
+        0.91
+      ],
+      [
+        0.32,
+        0.25
+      ],
+      [
+        0.98,
+        0.96
+      ],
+      [
+        0.79,
+        0.78
+      ],
+      [
+        1.13,
+        1.08
+      ],
+      [
+        0.36,
+        0.3
+      ],
+      [
+        1.12,
+        1.14
+      ],
+      [
+        0.48,
+        0.54
+      ],
+      [
+        0.61,
+        0.49
+      ],
+      [
+        1.12,
+        1.05
+      ],
+      [
+        0.59,
+        0.48
+      ],
+      [
+        0.92,
+        0.93
+      ],
+      [
+        1.02,
+        0.94
+      ],
+      [
+        0.73,
+        0.73
+      ],
+      [
+        0.4,
+        0.28
+      ],
+      [
+        1.16,
+        1.16
+      ],
+      [
+        1.01,
+        1.12
+      ],
+      [
+        0.46,
+        0.38
+      ],
+      [
+        0.51,
+        0.54
+      ],
+      [
+        0.64,
+        0.73
+      ],
+      [
+        0.81,
+        0.7
+      ],
+      [
+        0.33,
+        0.39
+      ],
+      [
+        1.01,
+        1.05
+      ],
+      [
+        1.17,
+        1.24
+      ],
+      [
+        1.04,
+        1.02
+      ],
+      [
+        0.33,
+        0.24
+      ],
+      [
+        0.82,
+        0.87
+      ],
+      [
+        0.5,
+        0.53
+      ],
+      [
+        1.19,
+        1.2
+      ],
+      [
+        0.77,
+        0.67
+      ],
+      [
+        0.36,
+        0.4
+      ],
+      [
+        0.54,
+        0.63
+      ],
+      [
+        0.68,
+        0.69
+      ],
+      [
+        0.65,
+        0.68
+      ],
+      [
+        1.04,
+        0.95
+      ],
+      [
+        1.14,
+        1.19
+      ],
+      [
+        0.63,
+        0.59
+      ],
+      [
+        1.13,
+        1.13
+      ],
+      [
+        0.57,
+        0.4
+      ],
+      [
+        1.19,
+        1.17
+      ],
+      [
+        0.98,
+        0.99
+      ],
+      [
+        0.64,
+        0.6
+      ],
+      [
+        1.0,
+        1.08
+      ],
+      [
+        1.01,
+        0.86
+      ],
+      [
+        1.17,
+        1.34
+      ],
+      [
+        0.51,
+        0.48
+      ],
+      [
+        1.19,
+        1.29
+      ],
+      [
+        0.73,
+        0.87
+      ],
+      [
+        1.04,
+        1.06
+      ],
+      [
+        0.82,
+        0.74
+      ],
+      [
+        0.72,
+        0.7
+      ],
+      [
+        0.39,
+        0.48
+      ],
+      [
+        0.82,
+        0.79
+      ],
+      [
+        0.34,
+        0.46
+      ],
+      [
+        0.58,
+        0.49
+      ],
+      [
+        0.45,
+        0.33
+      ],
+      [
+        0.37,
+        0.42
+      ],
+      [
+        0.45,
+        0.49
+      ],
+      [
+        0.69,
+        0.62
+      ],
+      [
+        0.37,
+        0.18
+      ],
+      [
+        0.75,
+        0.71
+      ],
+      [
+        0.56,
+        0.74
+      ],
+      [
+        1.0,
+        1.01
+      ],
+      [
+        0.57,
+        0.69
+      ],
+      [
+        0.71,
+        0.73
+      ],
+      [
+        0.79,
+        0.72
+      ],
+      [
+        0.71,
+        0.66
+      ],
+      [
+        0.78,
+        0.57
+      ],
+      [
+        0.96,
+        0.97
+      ],
+      [
+        0.31,
+        0.23
+      ],
+      [
+        1.06,
+        1.05
+      ],
+      [
+        0.78,
+        0.84
+      ],
+      [
+        0.84,
+        0.8
+      ],
+      [
+        1.14,
+        0.98
+      ],
+      [
+        0.94,
+        0.92
+      ],
+      [
+        1.07,
+        1.18
+      ],
+      [
+        0.58,
+        0.58
+      ],
+      [
+        0.48,
+        0.55
+      ],
+      [
+        1.16,
+        1.01
+      ],
+      [
+        0.74,
+        0.58
+      ],
+      [
+        0.66,
+        0.54
+      ],
+      [
+        0.93,
+        1.0
+      ],
+      [
+        1.17,
+        1.07
+      ],
+      [
+        0.3,
+        0.23
+      ],
+      [
+        0.61,
+        0.6
+      ],
+      [
+        0.97,
+        1.0
+      ],
+      [
+        0.79,
+        0.75
+      ],
+      [
+        0.84,
+        0.82
+      ],
+      [
+        1.17,
+        1.11
+      ],
+      [
+        0.96,
+        0.91
+      ],
+      [
+        0.87,
+        0.85
+      ],
+      [
+        0.72,
+        0.77
+      ],
+      [
+        0.5,
+        0.56
+      ],
+      [
+        0.45,
+        0.37
+      ],
+      [
+        0.85,
+        0.75
+      ],
+      [
+        0.51,
+        0.6
+      ],
+      [
+        1.01,
+        1.05
+      ],
+      [
+        0.32,
+        0.29
+      ],
+      [
+        0.71,
+        0.69
+      ],
+      [
+        0.33,
+        0.32
+      ],
+      [
+        0.3,
+        0.11
+      ],
+      [
+        0.9,
+        0.7
+      ],
+      [
+        1.0,
+        0.96
+      ],
+      [
+        0.5,
+        0.57
+      ],
+      [
+        0.95,
+        0.79
+      ],
+      [
+        0.4,
+        0.42
+      ],
+      [
+        1.17,
+        1.12
+      ],
+      [
+        0.67,
+        0.45
+      ],
+      [
+        0.46,
+        0.43
+      ],
+      [
+        1.03,
+        0.97
+      ],
+      [
+        0.87,
+        0.95
+      ],
+      [
+        0.52,
+        0.69
+      ],
+      [
+        1.14,
+        1.13
+      ],
+      [
+        0.57,
+        0.69
+      ],
+      [
+        0.94,
+        0.91
+      ],
+      [
+        0.72,
+        0.68
+      ],
+      [
+        1.18,
+        1.22
+      ],
+      [
+        0.47,
+        0.41
+      ],
+      [
+        0.34,
+        0.44
+      ],
+      [
+        1.18,
+        1.12
+      ],
+      [
+        0.53,
+        0.4
+      ],
+      [
+        0.51,
+        0.54
+      ],
+      [
+        0.64,
+        0.54
+      ],
+      [
+        1.02,
+        0.93
+      ],
+      [
+        0.46,
+        0.49
+      ],
+      [
+        0.66,
+        0.62
+      ],
+      [
+        0.79,
+        0.78
+      ],
+      [
+        0.73,
+        0.84
+      ],
+      [
+        0.66,
+        0.58
+      ],
+      [
+        0.62,
+        0.63
+      ],
+      [
+        0.43,
+        0.42
+      ],
+      [
+        1.18,
+        1.09
+      ],
+      [
+        0.6,
+        0.6
+      ],
+      [
+        0.43,
+        0.39
+      ],
+      [
+        0.43,
+        0.43
+      ],
+      [
+        0.38,
+        0.23
+      ],
+      [
+        0.66,
+        0.63
+      ],
+      [
+        0.78,
+        0.87
+      ],
+      [
+        1.06,
+        1.24
+      ],
+      [
+        0.38,
+        0.42
+      ],
+      [
+        0.44,
+        0.45
+      ],
+      [
+        0.71,
+        0.59
+      ],
+      [
+        0.99,
+        0.92
+      ],
+      [
+        0.75,
+        0.75
+      ],
+      [
+        0.46,
+        0.4
+      ],
+      [
+        1.05,
+        1.06
+      ],
+      [
+        0.51,
+        0.61
+      ],
+      [
+        0.81,
+        0.87
+      ],
+      [
+        0.5,
+        0.42
+      ],
+      [
+        0.85,
+        0.91
+      ],
+      [
+        0.65,
+        0.77
+      ],
+      [
+        0.56,
+        0.25
+      ],
+      [
+        0.39,
+        0.33
+      ],
+      [
+        0.82,
+        0.91
+      ],
+      [
+        0.72,
+        0.74
+      ],
+      [
+        0.37,
+        0.4
+      ],
+      [
+        0.39,
+        0.34
+      ],
+      [
+        0.46,
+        0.58
+      ],
+      [
+        0.87,
+        0.85
+      ],
+      [
+        0.82,
+        0.72
+      ],
+      [
+        0.4,
+        0.37
+      ],
+      [
+        1.02,
+        1.01
+      ],
+      [
+        1.1,
+        1.16
+      ],
+      [
+        0.66,
+        0.64
+      ],
+      [
+        0.33,
+        0.26
+      ],
+      [
+        0.67,
+        0.67
+      ],
+      [
+        0.8,
+        0.87
+      ],
+      [
+        1.04,
+        1.06
+      ],
+      [
+        0.69,
+        0.93
+      ],
+      [
+        1.07,
+        1.07
+      ],
+      [
+        0.41,
+        0.34
+      ],
+      [
+        1.13,
+        1.23
+      ],
+      [
+        0.89,
+        0.82
+      ],
+      [
+        0.79,
+        0.62
+      ],
+      [
+        0.61,
+        0.63
+      ],
+      [
+        0.53,
+        0.58
+      ],
+      [
+        0.67,
+        0.74
+      ],
+      [
+        0.95,
+        0.78
+      ],
+      [
+        1.1,
+        1.09
+      ],
+      [
+        0.83,
+        0.99
+      ],
+      [
+        1.12,
+        1.18
+      ],
+      [
+        0.67,
+        0.68
+      ],
+      [
+        0.54,
+        0.54
+      ],
+      [
+        0.84,
+        0.79
+      ],
+      [
+        1.15,
+        1.11
+      ],
+      [
+        1.15,
+        0.91
+      ],
+      [
+        0.47,
+        0.48
+      ],
+      [
+        1.17,
+        1.22
+      ],
+      [
+        0.7,
+        0.69
+      ],
+      [
+        1.12,
+        1.0
+      ],
+      [
+        1.15,
+        1.15
+      ],
+      [
+        1.03,
+        1.14
+      ],
+      [
+        0.39,
+        0.45
+      ],
+      [
+        0.7,
+        0.76
+      ],
+      [
+        0.59,
+        0.58
+      ],
+      [
+        1.0,
+        0.99
+      ],
+      [
+        0.64,
+        0.53
+      ],
+      [
+        0.41,
+        0.1
+      ],
+      [
+        1.16,
+        1.21
+      ],
+      [
+        0.61,
+        0.68
+      ],
+      [
+        0.85,
+        1.02
+      ],
+      [
+        0.45,
+        0.54
+      ],
+      [
+        0.49,
+        0.42
+      ],
+      [
+        0.84,
+        0.86
+      ],
+      [
+        0.78,
+        0.81
+      ],
+      [
+        0.84,
+        0.73
+      ],
+      [
+        0.42,
+        0.46
+      ],
+      [
+        1.05,
+        1.06
+      ],
+      [
+        1.1,
+        0.98
+      ],
+      [
+        1.07,
+        1.02
+      ],
+      [
+        0.35,
+        0.21
+      ],
+      [
+        0.83,
+        0.86
+      ],
+      [
+        0.66,
+        0.67
+      ],
+      [
+        1.04,
+        1.07
+      ],
+      [
+        0.41,
+        0.56
+      ],
+      [
+        1.09,
+        1.16
+      ],
+      [
+        0.62,
+        0.54
+      ],
+      [
+        1.04,
+        0.91
+      ],
+      [
+        1.02,
+        1.05
+      ],
+      [
+        0.89,
+        0.82
+      ],
+      [
+        1.01,
+        1.0
+      ],
+      [
+        0.62,
+        0.59
+      ],
+      [
+        1.03,
+        1.18
+      ],
+      [
+        0.38,
+        0.33
+      ],
+      [
+        0.32,
+        0.44
+      ],
+      [
+        0.58,
+        0.53
+      ],
+      [
+        0.47,
+        0.6
+      ],
+      [
+        0.78,
+        0.76
+      ],
+      [
+        0.5,
+        0.65
+      ],
+      [
+        0.39,
+        0.4
+      ],
+      [
+        0.89,
+        0.77
+      ],
+      [
+        1.08,
+        1.08
+      ],
+      [
+        0.45,
+        0.38
+      ],
+      [
+        0.35,
+        0.18
+      ],
+      [
+        0.69,
+        0.78
+      ],
+      [
+        0.46,
+        0.4
+      ],
+      [
+        0.59,
+        0.48
+      ],
+      [
+        0.67,
+        0.73
+      ],
+      [
+        0.86,
+        0.78
+      ],
+      [
+        0.84,
+        0.81
+      ],
+      [
+        1.17,
+        1.12
+      ],
+      [
+        1.11,
+        1.13
+      ],
+      [
+        1.06,
+        1.21
+      ],
+      [
+        0.33,
+        0.28
+      ],
+      [
+        1.1,
+        1.31
+      ],
+      [
+        0.66,
+        0.79
+      ],
+      [
+        0.62,
+        0.74
+      ],
+      [
+        0.72,
+        0.68
+      ],
+      [
+        1.15,
+        1.22
+      ],
+      [
+        0.66,
+        0.64
+      ],
+      [
+        0.91,
+        0.85
+      ],
+      [
+        0.65,
+        0.85
+      ],
+      [
+        0.7,
+        0.78
+      ],
+      [
+        0.89,
+        1.01
+      ],
+      [
+        0.79,
+        0.62
+      ],
+      [
+        0.32,
+        0.15
+      ],
+      [
+        1.08,
+        1.04
+      ],
+      [
+        1.16,
+        1.09
+      ],
+      [
+        0.61,
+        0.55
+      ],
+      [
+        0.84,
+        0.9
+      ],
+      [
+        0.35,
+        0.38
+      ],
+      [
+        0.91,
+        0.78
+      ],
+      [
+        0.98,
+        1.02
+      ],
+      [
+        0.41,
+        0.49
+      ],
+      [
+        0.43,
+        0.3
+      ],
+      [
+        0.75,
+        0.72
+      ],
+      [
+        0.55,
+        0.3
+      ],
+      [
+        0.91,
+        0.91
+      ],
+      [
+        0.46,
+        0.49
+      ],
+      [
+        1.16,
+        1.21
+      ],
+      [
+        0.77,
+        0.84
+      ],
+      [
+        0.34,
+        0.39
+      ],
+      [
+        0.67,
+        0.66
+      ],
+      [
+        0.3,
+        0.25
+      ],
+      [
+        0.79,
+        0.75
+      ],
+      [
+        1.13,
+        1.19
+      ],
+      [
+        1.02,
+        0.71
+      ],
+      [
+        1.0,
+        0.97
+      ],
+      [
+        0.92,
+        1.01
+      ],
+      [
+        0.94,
+        0.97
+      ],
+      [
+        1.03,
+        1.03
+      ],
+      [
+        0.66,
+        0.54
+      ],
+      [
+        0.72,
+        0.75
+      ],
+      [
+        0.92,
+        0.98
+      ],
+      [
+        0.42,
+        0.56
+      ],
+      [
+        0.53,
+        0.49
+      ],
+      [
+        0.53,
+        0.63
+      ],
+      [
+        0.95,
+        0.92
+      ],
+      [
+        1.17,
+        1.35
+      ],
+      [
+        1.01,
+        0.79
+      ],
+      [
+        0.94,
+        1.03
+      ],
+      [
+        0.51,
+        0.41
+      ],
+      [
+        0.55,
+        0.41
+      ],
+      [
+        0.31,
+        0.18
+      ],
+      [
+        0.7,
+        0.7
+      ],
+      [
+        0.87,
+        0.84
+      ],
+      [
+        1.08,
+        0.92
+      ],
+      [
+        1.18,
+        1.3
+      ],
+      [
+        0.64,
+        0.67
+      ],
+      [
+        0.45,
+        0.5
+      ],
+      [
+        0.67,
+        0.49
+      ],
+      [
+        1.2,
+        1.15
+      ],
+      [
+        0.79,
+        0.79
+      ],
+      [
+        0.44,
+        0.38
+      ],
+      [
+        0.96,
+        0.83
+      ],
+      [
+        1.17,
+        0.96
+      ],
+      [
+        0.75,
+        0.71
+      ],
+      [
+        0.94,
+        0.85
+      ],
+      [
+        0.81,
+        0.87
+      ],
+      [
+        0.38,
+        0.34
+      ],
+      [
+        0.52,
+        0.5
+      ],
+      [
+        0.51,
+        0.6
+      ],
+      [
+        0.83,
+        0.83
+      ],
+      [
+        0.45,
+        0.24
+      ],
+      [
+        0.37,
+        0.43
+      ],
+      [
+        0.49,
+        0.57
+      ],
+      [
+        0.33,
+        0.26
+      ],
+      [
+        1.18,
+        1.07
+      ],
+      [
+        0.36,
+        0.15
+      ],
+      [
+        0.75,
+        0.71
+      ],
+      [
+        0.51,
+        0.44
+      ],
+      [
+        0.91,
+        0.96
+      ],
+      [
+        0.55,
+        0.6
+      ],
+      [
+        0.61,
+        0.53
+      ],
+      [
+        0.65,
+        0.68
+      ],
+      [
+        1.03,
+        0.9
+      ],
+      [
+        0.8,
+        0.9
+      ],
+      [
+        0.97,
+        0.88
+      ],
+      [
+        0.83,
+        0.74
+      ],
+      [
+        0.9,
+        0.78
+      ],
+      [
+        1.18,
+        1.17
+      ],
+      [
+        0.82,
+        0.69
+      ],
+      [
+        0.7,
+        0.61
+      ],
+      [
+        1.14,
+        1.14
+      ],
+      [
+        0.74,
+        0.55
+      ],
+      [
+        0.31,
+        0.25
+      ],
+      [
+        0.71,
+        0.75
+      ],
+      [
+        0.41,
+        0.39
+      ],
+      [
+        0.84,
+        0.78
+      ],
+      [
+        0.77,
+        0.87
+      ],
+      [
+        0.35,
+        0.26
+      ],
+      [
+        0.77,
+        0.7
+      ],
+      [
+        0.7,
+        0.7
+      ],
+      [
+        0.77,
+        0.71
+      ],
+      [
+        0.82,
+        0.87
+      ],
+      [
+        0.41,
+        0.42
+      ],
+      [
+        1.05,
+        0.92
+      ],
+      [
+        0.8,
+        0.73
+      ],
+      [
+        0.63,
+        0.61
+      ],
+      [
+        0.79,
+        0.78
+      ],
+      [
+        0.31,
+        0.31
+      ],
+      [
+        0.31,
+        0.28
+      ],
+      [
+        0.55,
+        0.5
+      ],
+      [
+        0.6,
+        0.59
+      ],
+      [
+        0.9,
+        1.08
+      ],
+      [
+        0.63,
+        0.68
+      ],
+      [
+        0.49,
+        0.58
+      ],
+      [
+        0.8,
+        0.89
+      ],
+      [
+        1.16,
+        1.33
+      ],
+      [
+        0.49,
+        0.47
+      ],
+      [
+        0.4,
+        0.36
+      ],
+      [
+        1.13,
+        1.11
+      ],
+      [
+        0.36,
+        0.25
+      ],
+      [
+        0.69,
+        0.63
+      ],
+      [
+        1.07,
+        1.16
+      ],
+      [
+        0.58,
+        0.36
+      ],
+      [
+        0.51,
+        0.52
+      ],
+      [
+        0.78,
+        0.76
+      ],
+      [
+        1.11,
+        1.09
+      ],
+      [
+        0.38,
+        0.26
+      ],
+      [
+        0.39,
+        0.34
+      ],
+      [
+        1.08,
+        1.19
+      ],
+      [
+        0.41,
+        0.46
+      ],
+      [
+        0.88,
+        1.0
+      ],
+      [
+        1.09,
+        1.18
+      ],
+      [
+        0.56,
+        0.46
+      ],
+      [
+        0.34,
+        0.38
+      ],
+      [
+        0.99,
+        0.94
+      ],
+      [
+        0.46,
+        0.43
+      ],
+      [
+        0.81,
+        0.9
+      ],
+      [
+        0.53,
+        0.59
+      ],
+      [
+        0.61,
+        0.69
+      ],
+      [
+        0.92,
+        0.93
+      ],
+      [
+        0.93,
+        0.94
+      ],
+      [
+        0.93,
+        1.02
+      ],
+      [
+        0.5,
+        0.52
+      ],
+      [
+        0.92,
+        0.82
+      ],
+      [
+        1.17,
+        1.28
+      ],
+      [
+        0.91,
+        0.99
+      ],
+      [
+        0.69,
+        0.82
+      ],
+      [
+        0.39,
+        0.41
+      ],
+      [
+        0.93,
+        1.21
+      ],
+      [
+        0.37,
+        0.25
+      ],
+      [
+        0.45,
+        0.6
+      ],
+      [
+        0.92,
+        0.81
+      ],
+      [
+        1.18,
+        1.06
+      ],
+      [
+        0.69,
+        0.73
+      ],
+      [
+        0.67,
+        0.49
+      ],
+      [
+        1.02,
+        1.05
+      ],
+      [
+        0.75,
+        0.76
+      ],
+      [
+        0.36,
+        0.24
+      ],
+      [
+        1.06,
+        1.18
+      ],
+      [
+        0.92,
+        1.01
+      ],
+      [
+        0.83,
+        0.92
+      ],
+      [
+        1.01,
+        0.99
+      ],
+      [
+        0.31,
+        0.19
+      ],
+      [
+        1.04,
+        1.04
+      ],
+      [
+        0.47,
+        0.61
+      ],
+      [
+        0.36,
+        0.35
+      ],
+      [
+        0.68,
+        0.61
+      ],
+      [
+        0.91,
+        1.06
+      ],
+      [
+        1.09,
+        1.21
+      ],
+      [
+        0.41,
+        0.46
+      ],
+      [
+        0.33,
+        0.35
+      ],
+      [
+        0.62,
+        0.59
+      ],
+      [
+        0.39,
+        0.44
+      ],
+      [
+        0.47,
+        0.39
+      ],
+      [
+        0.39,
+        0.2
+      ],
+      [
+        0.99,
+        0.85
+      ],
+      [
+        0.43,
+        0.49
+      ],
+      [
+        0.78,
+        0.86
+      ],
+      [
+        0.98,
+        0.84
+      ],
+      [
+        0.66,
+        0.77
+      ],
+      [
+        1.13,
+        1.16
+      ],
+      [
+        1.12,
+        1.12
+      ],
+      [
+        1.17,
+        1.07
+      ],
+      [
+        0.98,
+        0.87
+      ],
+      [
+        0.66,
+        0.59
+      ],
+      [
+        0.32,
+        0.32
+      ],
+      [
+        1.09,
+        1.15
+      ],
+      [
+        0.87,
+        0.89
+      ],
+      [
+        1.05,
+        1.06
+      ],
+      [
+        0.94,
+        0.79
+      ],
+      [
+        0.79,
+        0.68
+      ],
+      [
+        0.9,
+        0.96
+      ],
+      [
+        1.06,
+        1.13
+      ],
+      [
+        0.42,
+        0.4
+      ],
+      [
+        0.76,
+        0.84
+      ],
+      [
+        0.69,
+        0.73
+      ],
+      [
+        0.49,
+        0.61
+      ],
+      [
+        0.93,
+        0.91
+      ],
+      [
+        0.99,
+        1.09
+      ],
+      [
+        0.36,
+        0.48
+      ],
+      [
+        1.0,
+        1.07
+      ],
+      [
+        0.69,
+        0.81
+      ],
+      [
+        0.71,
+        0.78
+      ],
+      [
+        0.48,
+        0.53
+      ],
+      [
+        1.12,
+        1.09
+      ],
+      [
+        0.91,
+        1.05
+      ],
+      [
+        0.98,
+        0.8
+      ],
+      [
+        1.04,
+        0.77
+      ],
+      [
+        0.82,
+        0.82
+      ],
+      [
+        0.79,
+        0.73
+      ],
+      [
+        0.35,
+        0.35
+      ],
+      [
+        0.43,
+        0.29
+      ],
+      [
+        1.0,
+        0.72
+      ],
+      [
+        0.82,
+        0.85
+      ],
+      [
+        0.85,
+        0.82
+      ],
+      [
+        0.73,
+        0.78
+      ],
+      [
+        0.37,
+        0.42
+      ],
+      [
+        0.74,
+        0.87
+      ],
+      [
+        0.54,
+        0.57
+      ],
+      [
+        0.38,
+        0.29
+      ],
+      [
+        0.43,
+        0.33
+      ],
+      [
+        0.71,
+        0.81
+      ],
+      [
+        0.61,
+        0.73
+      ],
+      [
+        1.17,
+        1.31
+      ],
+      [
+        1.15,
+        1.13
+      ],
+      [
+        1.05,
+        1.16
+      ],
+      [
+        0.61,
+        0.68
+      ],
+      [
+        0.76,
+        0.74
+      ],
+      [
+        0.81,
+        0.68
+      ],
+      [
+        0.33,
+        0.24
+      ],
+      [
+        1.09,
+        1.05
+      ],
+      [
+        1.17,
+        1.19
+      ],
+      [
+        1.13,
+        1.35
+      ],
+      [
+        0.47,
+        0.45
+      ],
+      [
+        0.48,
+        0.45
+      ],
+      [
+        0.64,
+        0.53
+      ],
+      [
+        0.84,
+        0.87
+      ],
+      [
+        1.16,
+        1.19
+      ],
+      [
+        1.06,
+        1.15
+      ],
+      [
+        0.42,
+        0.54
+      ],
+      [
+        1.14,
+        1.06
+      ],
+      [
+        1.18,
+        1.15
+      ],
+      [
+        0.38,
+        0.32
+      ],
+      [
+        0.64,
+        0.55
+      ],
+      [
+        0.9,
+        0.96
+      ],
+      [
+        0.55,
+        0.63
+      ],
+      [
+        0.6,
+        0.55
+      ],
+      [
+        0.94,
+        0.81
+      ],
+      [
+        0.85,
+        0.73
+      ],
+      [
+        0.38,
+        0.5
+      ],
+      [
+        0.68,
+        0.61
+      ],
+      [
+        1.15,
+        1.19
+      ],
+      [
+        0.68,
+        0.59
+      ],
+      [
+        1.17,
+        0.98
+      ],
+      [
+        0.46,
+        0.56
+      ],
+      [
+        0.97,
+        0.8
+      ],
+      [
+        0.55,
+        0.52
+      ],
+      [
+        0.53,
+        0.63
+      ],
+      [
+        0.6,
+        0.61
+      ],
+      [
+        1.11,
+        1.06
+      ],
+      [
+        0.97,
+        0.91
+      ],
+      [
+        0.35,
+        0.37
+      ],
+      [
+        1.13,
+        1.07
+      ],
+      [
+        0.98,
+        0.86
+      ],
+      [
+        0.85,
+        0.85
+      ],
+      [
+        0.64,
+        0.79
+      ],
+      [
+        0.43,
+        0.48
+      ],
+      [
+        0.32,
+        0.28
+      ],
+      [
+        0.77,
+        0.68
+      ],
+      [
+        1.14,
+        1.08
+      ],
+      [
+        0.3,
+        0.18
+      ],
+      [
+        0.59,
+        0.67
+      ],
+      [
+        0.95,
+        0.95
+      ],
+      [
+        0.66,
+        0.7
+      ],
+      [
+        0.82,
+        0.85
+      ],
+      [
+        1.07,
+        0.95
+      ],
+      [
+        0.37,
+        0.16
+      ],
+      [
+        0.6,
+        0.6
+      ],
+      [
+        1.11,
+        1.15
+      ],
+      [
+        0.65,
+        0.66
+      ],
+      [
+        1.04,
+        1.11
+      ],
+      [
+        1.11,
+        1.1
+      ],
+      [
+        1.08,
+        1.13
+      ],
+      [
+        0.71,
+        0.62
+      ],
+      [
+        0.57,
+        0.42
+      ],
+      [
+        0.46,
+        0.42
+      ],
+      [
+        0.81,
+        0.98
+      ],
+      [
+        0.69,
+        0.68
+      ],
+      [
+        0.44,
+        0.41
+      ],
+      [
+        1.17,
+        1.31
+      ],
+      [
+        0.92,
+        1.07
+      ],
+      [
+        0.92,
+        0.78
+      ],
+      [
+        0.54,
+        0.61
+      ],
+      [
+        1.08,
+        1.03
+      ],
+      [
+        0.86,
+        1.06
+      ],
+      [
+        0.46,
+        0.38
+      ],
+      [
+        0.33,
+        0.39
+      ],
+      [
+        0.46,
+        0.52
+      ],
+      [
+        0.36,
+        0.24
+      ],
+      [
+        1.1,
+        1.28
+      ],
+      [
+        0.52,
+        0.48
+      ],
+      [
+        1.12,
+        1.15
+      ],
+      [
+        1.0,
+        0.96
+      ],
+      [
+        0.42,
+        0.51
+      ],
+      [
+        0.57,
+        0.68
+      ],
+      [
+        0.76,
+        0.75
+      ],
+      [
+        0.9,
+        0.87
+      ],
+      [
+        0.76,
+        0.74
+      ],
+      [
+        1.08,
+        1.12
+      ],
+      [
+        0.31,
+        0.22
+      ],
+      [
+        1.17,
+        1.15
+      ],
+      [
+        0.46,
+        0.47
+      ],
+      [
+        0.53,
+        0.35
+      ],
+      [
+        1.14,
+        1.11
+      ],
+      [
+        0.9,
+        0.79
+      ],
+      [
+        0.35,
+        0.2
+      ],
+      [
+        0.67,
+        0.68
+      ],
+      [
+        0.35,
+        0.43
+      ],
+      [
+        1.06,
+        0.93
+      ],
+      [
+        0.89,
+        0.82
+      ],
+      [
+        0.89,
+        0.95
+      ],
+      [
+        1.17,
+        1.21
+      ],
+      [
+        0.38,
+        0.39
+      ],
+      [
+        0.6,
+        0.53
+      ],
+      [
+        1.03,
+        0.92
+      ],
+      [
+        0.74,
+        0.66
+      ],
+      [
+        0.44,
+        0.36
+      ],
+      [
+        0.93,
+        0.95
+      ],
+      [
+        0.63,
+        0.67
+      ],
+      [
+        0.54,
+        0.38
+      ],
+      [
+        0.65,
+        0.77
+      ],
+      [
+        0.55,
+        0.4
+      ],
+      [
+        0.94,
+        0.97
+      ],
+      [
+        0.95,
+        1.01
+      ],
+      [
+        0.95,
+        0.91
+      ],
+      [
+        0.74,
+        0.68
+      ],
+      [
+        0.8,
+        0.79
+      ],
+      [
+        0.64,
+        0.66
+      ],
+      [
+        1.13,
+        1.09
+      ],
+      [
+        0.31,
+        0.26
+      ],
+      [
+        0.79,
+        0.97
+      ],
+      [
+        1.06,
+        1.13
+      ],
+      [
+        0.51,
+        0.61
+      ],
+      [
+        0.57,
+        0.5
+      ],
+      [
+        0.95,
+        1.06
+      ],
+      [
+        1.14,
+        1.1
+      ],
+      [
+        1.15,
+        1.36
+      ],
+      [
+        0.67,
+        0.8
+      ],
+      [
+        0.84,
+        0.92
+      ],
+      [
+        1.19,
+        1.2
+      ],
+      [
+        0.85,
+        0.82
+      ],
+      [
+        0.63,
+        0.61
+      ],
+      [
+        1.07,
+        1.25
+      ],
+      [
+        0.84,
+        0.82
+      ],
+      [
+        1.11,
+        1.06
+      ],
+      [
+        0.64,
+        0.74
+      ],
+      [
+        0.64,
+        0.66
+      ],
+      [
+        0.63,
+        0.54
+      ],
+      [
+        0.49,
+        0.38
+      ],
+      [
+        1.04,
+        1.16
+      ],
+      [
+        1.07,
+        0.88
+      ],
+      [
+        0.92,
+        0.9
+      ],
+      [
+        0.69,
+        0.74
+      ],
+      [
+        0.68,
+        0.57
+      ],
+      [
+        1.03,
+        1.06
+      ],
+      [
+        0.51,
+        0.39
+      ],
+      [
+        0.75,
+        0.96
+      ],
+      [
+        0.76,
+        0.66
+      ],
+      [
+        0.44,
+        0.51
+      ],
+      [
+        1.04,
+        0.99
+      ],
+      [
+        0.42,
+        0.31
+      ],
+      [
+        0.41,
+        0.48
+      ],
+      [
+        1.0,
+        0.88
+      ],
+      [
+        0.96,
+        0.93
+      ],
+      [
+        0.31,
+        0.2
+      ],
+      [
+        0.53,
+        0.53
+      ],
+      [
+        1.02,
+        0.95
+      ],
+      [
+        0.64,
+        0.68
+      ],
+      [
+        0.81,
+        0.98
+      ],
+      [
+        1.13,
+        1.19
+      ],
+      [
+        0.99,
+        0.97
+      ],
+      [
+        0.33,
+        0.38
+      ],
+      [
+        0.36,
+        0.49
+      ],
+      [
+        1.16,
+        1.06
+      ],
+      [
+        0.45,
+        0.44
+      ],
+      [
+        0.47,
+        0.62
+      ],
+      [
+        0.45,
+        0.33
+      ],
+      [
+        1.13,
+        1.17
+      ],
+      [
+        0.6,
+        0.72
+      ],
+      [
+        1.18,
+        1.16
+      ],
+      [
+        0.82,
+        0.7
+      ],
+      [
+        0.86,
+        0.92
+      ],
+      [
+        1.04,
+        1.05
+      ],
+      [
+        0.68,
+        0.67
+      ],
+      [
+        0.85,
+        0.76
+      ],
+      [
+        1.0,
+        0.98
+      ],
+      [
+        1.07,
+        1.14
+      ],
+      [
+        0.44,
+        0.5
+      ],
+      [
+        0.64,
+        0.72
+      ],
+      [
+        0.97,
+        0.96
+      ],
+      [
+        0.58,
+        0.46
+      ],
+      [
+        0.34,
+        0.37
+      ],
+      [
+        0.86,
+        0.87
+      ],
+      [
+        1.05,
+        0.92
+      ],
+      [
+        0.32,
+        0.25
+      ],
+      [
+        1.1,
+        1.09
+      ],
+      [
+        0.65,
+        0.71
+      ],
+      [
+        0.48,
+        0.44
+      ],
+      [
+        0.72,
+        0.69
+      ],
+      [
+        0.63,
+        0.69
+      ],
+      [
+        0.4,
+        0.43
+      ],
+      [
+        0.36,
+        0.37
+      ],
+      [
+        1.09,
+        0.9
+      ],
+      [
+        0.48,
+        0.58
+      ],
+      [
+        1.15,
+        1.09
+      ],
+      [
+        0.65,
+        0.55
+      ],
+      [
+        0.98,
+        0.82
+      ],
+      [
+        0.53,
+        0.53
+      ],
+      [
+        0.42,
+        0.28
+      ],
+      [
+        1.12,
+        1.28
+      ],
+      [
+        0.95,
+        0.93
+      ],
+      [
+        0.65,
+        0.75
+      ],
+      [
+        0.77,
+        0.67
+      ],
+      [
+        0.41,
+        0.5
+      ],
+      [
+        0.73,
+        0.57
+      ],
+      [
+        0.51,
+        0.48
+      ],
+      [
+        0.31,
+        0.3
+      ],
+      [
+        0.95,
+        1.08
+      ],
+      [
+        1.03,
+        1.15
+      ],
+      [
+        0.45,
+        0.38
+      ],
+      [
+        1.03,
+        0.91
+      ],
+      [
+        0.4,
+        0.44
+      ],
+      [
+        1.07,
+        1.06
+      ],
+      [
+        0.7,
+        0.63
+      ],
+      [
+        0.68,
+        0.73
+      ],
+      [
+        1.0,
+        0.87
+      ],
+      [
+        0.84,
+        0.9
+      ],
+      [
+        0.67,
+        0.7
+      ],
+      [
+        0.49,
+        0.5
+      ],
+      [
+        1.15,
+        1.08
+      ],
+      [
+        1.04,
+        1.14
+      ],
+      [
+        1.13,
+        1.15
+      ],
+      [
+        1.09,
+        1.17
+      ],
+      [
+        0.72,
+        0.72
+      ],
+      [
+        1.12,
+        1.18
+      ],
+      [
+        0.51,
+        0.37
+      ],
+      [
+        1.16,
+        1.14
+      ],
+      [
+        0.71,
+        0.63
+      ],
+      [
+        1.02,
+        1.24
+      ],
+      [
+        0.81,
+        0.81
+      ],
+      [
+        0.79,
+        0.74
+      ],
+      [
+        0.71,
+        0.85
+      ],
+      [
+        0.87,
+        0.86
+      ],
+      [
+        0.94,
+        1.0
+      ],
+      [
+        1.15,
+        1.04
+      ],
+      [
+        1.17,
+        1.23
+      ],
+      [
+        0.89,
+        0.97
+      ],
+      [
+        0.93,
+        0.87
+      ],
+      [
+        0.39,
+        0.17
+      ],
+      [
+        0.44,
+        0.44
+      ],
+      [
+        0.9,
+        0.97
+      ],
+      [
+        0.58,
+        0.55
+      ],
+      [
+        0.85,
+        1.11
+      ],
+      [
+        1.07,
+        1.18
+      ],
+      [
+        1.05,
+        1.24
+      ],
+      [
+        1.02,
+        0.9
+      ],
+      [
+        0.61,
+        0.71
+      ],
+      [
+        1.07,
+        1.02
+      ],
+      [
+        0.65,
+        0.65
+      ],
+      [
+        1.13,
+        1.2
+      ],
+      [
+        0.84,
+        0.83
+      ],
+      [
+        0.5,
+        0.44
+      ],
+      [
+        0.86,
+        0.66
+      ],
+      [
+        0.48,
+        0.44
+      ],
+      [
+        0.82,
+        0.65
+      ],
+      [
+        0.86,
+        0.95
+      ],
+      [
+        0.33,
+        0.28
+      ],
+      [
+        0.45,
+        0.47
+      ],
+      [
+        0.49,
+        0.55
+      ],
+      [
+        0.81,
+        0.98
+      ],
+      [
+        0.34,
+        0.21
+      ],
+      [
+        0.41,
+        0.51
+      ],
+      [
+        0.4,
+        0.45
+      ],
+      [
+        0.88,
+        0.86
+      ],
+      [
+        0.93,
+        1.02
+      ],
+      [
+        0.77,
+        0.83
+      ],
+      [
+        0.82,
+        0.87
+      ],
+      [
+        0.76,
+        0.7
+      ],
+      [
+        0.37,
+        0.35
+      ],
+      [
+        0.9,
+        0.8
+      ],
+      [
+        1.06,
+        1.08
+      ],
+      [
+        0.36,
+        0.36
+      ],
+      [
+        1.17,
+        1.2
+      ],
+      [
+        0.61,
+        0.77
+      ],
+      [
+        0.44,
+        0.36
+      ],
+      [
+        0.82,
+        0.75
+      ],
+      [
+        1.0,
+        1.06
+      ],
+      [
+        1.18,
+        1.23
+      ],
+      [
+        0.48,
+        0.57
+      ],
+      [
+        1.03,
+        0.99
+      ],
+      [
+        1.16,
+        1.14
+      ],
+      [
+        1.01,
+        1.05
+      ],
+      [
+        0.55,
+        0.55
+      ],
+      [
+        0.67,
+        0.63
+      ],
+      [
+        1.18,
+        1.33
+      ],
+      [
+        0.78,
+        0.73
+      ],
+      [
+        0.99,
+        1.09
+      ],
+      [
+        0.61,
+        0.66
+      ],
+      [
+        1.01,
+        1.05
+      ],
+      [
+        0.78,
+        0.73
+      ],
+      [
+        0.74,
+        0.89
+      ],
+      [
+        0.98,
+        1.11
+      ],
+      [
+        0.55,
+        0.44
+      ],
+      [
+        0.79,
+        0.78
+      ],
+      [
+        1.12,
+        1.28
+      ],
+      [
+        0.81,
+        0.85
+      ],
+      [
+        0.98,
+        1.05
+      ],
+      [
+        0.73,
+        0.71
+      ],
+      [
+        0.74,
+        0.76
+      ],
+      [
+        1.05,
+        1.08
+      ],
+      [
+        0.69,
+        0.77
+      ],
+      [
+        0.83,
+        0.94
+      ],
+      [
+        0.8,
+        0.76
+      ],
+      [
+        1.0,
+        1.04
+      ],
+      [
+        0.94,
+        1.02
+      ],
+      [
+        0.68,
+        0.56
+      ],
+      [
+        0.96,
+        1.03
+      ],
+      [
+        1.03,
+        1.08
+      ],
+      [
+        0.78,
+        0.65
+      ],
+      [
+        0.99,
+        0.97
+      ],
+      [
+        0.52,
+        0.36
+      ],
+      [
+        1.19,
+        1.08
+      ],
+      [
+        0.74,
+        0.84
+      ],
+      [
+        1.12,
+        1.1
+      ],
+      [
+        0.82,
+        0.75
+      ],
+      [
+        0.54,
+        0.47
+      ],
+      [
+        0.94,
+        1.06
+      ],
+      [
+        1.0,
+        1.21
+      ],
+      [
+        0.95,
+        0.92
+      ],
+      [
+        1.16,
+        1.25
+      ],
+      [
+        0.51,
+        0.61
+      ],
+      [
+        0.95,
+        0.84
+      ],
+      [
+        0.89,
+        1.02
+      ],
+      [
+        0.92,
+        0.87
+      ],
+      [
+        0.43,
+        0.31
+      ],
+      [
+        1.09,
+        1.05
+      ],
+      [
+        0.74,
+        0.74
+      ],
+      [
+        0.7,
+        0.9
+      ],
+      [
+        0.95,
+        0.94
+      ],
+      [
+        0.53,
+        0.56
+      ],
+      [
+        0.31,
+        0.42
+      ],
+      [
+        0.71,
+        0.63
+      ],
+      [
+        1.12,
+        1.28
+      ],
+      [
+        0.55,
+        0.71
+      ],
+      [
+        0.6,
+        0.74
+      ],
+      [
+        0.37,
+        0.47
+      ],
+      [
+        0.64,
+        0.7
+      ],
+      [
+        0.71,
+        0.89
+      ],
+      [
+        1.06,
+        1.04
+      ],
+      [
+        0.82,
+        0.78
+      ],
+      [
+        0.44,
+        0.45
+      ],
+      [
+        0.93,
+        1.03
+      ],
+      [
+        0.89,
+        0.87
+      ],
+      [
+        0.83,
+        0.96
+      ],
+      [
+        0.47,
+        0.59
+      ],
+      [
+        0.65,
+        0.71
+      ],
+      [
+        0.93,
+        0.89
+      ],
+      [
+        0.71,
+        0.7
+      ],
+      [
+        0.34,
+        0.34
+      ],
+      [
+        0.4,
+        0.41
+      ],
+      [
+        0.3,
+        0.33
+      ],
+      [
+        0.9,
+        0.91
+      ],
+      [
+        0.55,
+        0.59
+      ],
+      [
+        0.76,
+        0.73
+      ],
+      [
+        1.05,
+        1.0
+      ],
+      [
+        0.42,
+        0.31
+      ],
+      [
+        1.02,
+        0.94
+      ],
+      [
+        0.99,
+        1.0
+      ],
+      [
+        0.86,
+        1.01
+      ],
+      [
+        0.94,
+        0.81
+      ],
+      [
+        0.58,
+        0.66
+      ],
+      [
+        0.53,
+        0.49
+      ],
+      [
+        0.79,
+        0.91
+      ],
+      [
+        0.57,
+        0.64
+      ],
+      [
+        1.18,
+        1.19
+      ],
+      [
+        0.81,
+        0.92
+      ],
+      [
+        1.03,
+        1.05
+      ],
+      [
+        1.16,
+        1.24
+      ],
+      [
+        0.99,
+        1.01
+      ],
+      [
+        0.43,
+        0.35
+      ],
+      [
+        0.53,
+        0.57
+      ],
+      [
+        0.43,
+        0.47
+      ],
+      [
+        0.79,
+        0.75
+      ],
+      [
+        1.01,
+        1.03
+      ],
+      [
+        0.92,
+        0.86
+      ],
+      [
+        0.66,
+        0.69
+      ],
+      [
+        0.66,
+        0.62
+      ],
+      [
+        0.31,
+        0.31
+      ],
+      [
+        0.74,
+        0.69
+      ],
+      [
+        0.94,
+        0.9
+      ],
+      [
+        0.8,
+        0.85
+      ],
+      [
+        0.56,
+        0.6
+      ],
+      [
+        0.64,
+        0.48
+      ],
+      [
+        0.64,
+        0.58
+      ],
+      [
+        0.92,
+        0.96
+      ],
+      [
+        0.52,
+        0.42
+      ],
+      [
+        1.09,
+        1.11
+      ],
+      [
+        1.02,
+        1.04
+      ],
+      [
+        0.38,
+        0.39
+      ],
+      [
+        0.48,
+        0.59
+      ],
+      [
+        0.72,
+        0.7
+      ],
+      [
+        0.37,
+        0.2
+      ],
+      [
+        0.5,
+        0.53
+      ],
+      [
+        0.42,
+        0.36
+      ],
+      [
+        0.49,
+        0.52
+      ],
+      [
+        1.16,
+        1.22
+      ],
+      [
+        1.13,
+        1.24
+      ],
+      [
+        0.34,
+        0.25
+      ],
+      [
+        0.81,
+        0.7
+      ],
+      [
+        0.36,
+        0.29
+      ],
+      [
+        0.57,
+        0.5
+      ],
+      [
+        1.1,
+        1.04
+      ],
+      [
+        0.77,
+        0.72
+      ],
+      [
+        1.08,
+        1.05
+      ],
+      [
+        0.84,
+        0.62
+      ],
+      [
+        0.44,
+        0.47
+      ],
+      [
+        0.89,
+        0.85
+      ],
+      [
+        1.13,
+        1.02
+      ],
+      [
+        0.98,
+        0.94
+      ],
+      [
+        0.81,
+        0.71
+      ],
+      [
+        0.41,
+        0.33
+      ],
+      [
+        0.59,
+        0.47
+      ],
+      [
+        0.62,
+        0.64
+      ],
+      [
+        1.06,
+        1.04
+      ],
+      [
+        0.66,
+        0.67
+      ],
+      [
+        0.32,
+        0.35
+      ],
+      [
+        0.99,
+        0.98
+      ],
+      [
+        0.69,
+        0.61
+      ],
+      [
+        0.76,
+        0.98
+      ],
+      [
+        0.79,
+        0.78
+      ],
+      [
+        0.75,
+        0.96
+      ],
+      [
+        0.44,
+        0.4
+      ],
+      [
+        0.91,
+        0.91
+      ],
+      [
+        0.63,
+        0.67
+      ],
+      [
+        0.59,
+        0.54
+      ],
+      [
+        0.52,
+        0.47
+      ],
+      [
+        0.51,
+        0.64
+      ],
+      [
+        0.61,
+        0.75
+      ],
+      [
+        0.52,
+        0.44
+      ],
+      [
+        1.01,
+        1.1
+      ],
+      [
+        0.59,
+        0.52
+      ],
+      [
+        0.38,
+        0.48
+      ],
+      [
+        0.36,
+        0.3
+      ],
+      [
+        0.94,
+        1.12
+      ],
+      [
+        1.08,
+        1.0
+      ],
+      [
+        1.11,
+        1.13
+      ],
+      [
+        0.3,
+        0.3
+      ],
+      [
+        0.81,
+        0.84
+      ],
+      [
+        0.86,
+        0.73
+      ],
+      [
+        1.07,
+        0.97
+      ],
+      [
+        0.54,
+        0.72
+      ],
+      [
+        0.71,
+        0.72
+      ],
+      [
+        0.85,
+        0.97
+      ],
+      [
+        0.65,
+        0.81
+      ],
+      [
+        0.74,
+        0.71
+      ],
+      [
+        1.06,
+        1.06
+      ],
+      [
+        0.83,
+        0.64
+      ],
+      [
+        0.6,
+        0.59
+      ],
+      [
+        0.33,
+        0.43
+      ],
+      [
+        0.69,
+        0.7
+      ],
+      [
+        0.89,
+        0.84
+      ],
+      [
+        0.6,
+        0.66
+      ],
+      [
+        0.88,
+        0.93
+      ],
+      [
+        0.82,
+        0.71
+      ],
+      [
+        0.58,
+        0.31
+      ],
+      [
+        0.47,
+        0.49
+      ],
+      [
+        0.37,
+        0.47
+      ],
+      [
+        0.95,
+        0.94
+      ],
+      [
+        0.77,
+        0.79
+      ],
+      [
+        0.97,
+        0.91
+      ],
+      [
+        0.62,
+        0.72
+      ],
+      [
+        0.44,
+        0.22
+      ],
+      [
+        1.04,
+        1.03
+      ],
+      [
+        0.47,
+        0.51
+      ],
+      [
+        0.55,
+        0.57
+      ],
+      [
+        0.72,
+        0.72
+      ],
+      [
+        0.35,
+        0.21
+      ],
+      [
+        0.39,
+        0.5
+      ],
+      [
+        0.96,
+        0.93
+      ],
+      [
+        0.99,
+        0.94
+      ],
+      [
+        0.62,
+        0.75
+      ],
+      [
+        0.33,
+        0.26
+      ],
+      [
+        1.04,
+        1.23
+      ],
+      [
+        0.38,
+        0.39
+      ],
+      [
+        1.02,
+        0.91
+      ],
+      [
+        0.81,
+        0.9
+      ],
+      [
+        0.95,
+        1.02
+      ],
+      [
+        0.31,
+        0.29
+      ],
+      [
+        0.77,
+        0.79
+      ],
+      [
+        0.69,
+        0.69
+      ],
+      [
+        1.03,
+        1.17
+      ],
+      [
+        0.95,
+        1.04
+      ],
+      [
+        0.34,
+        0.22
+      ],
+      [
+        0.84,
+        0.86
+      ],
+      [
+        0.39,
+        0.47
+      ],
+      [
+        0.34,
+        0.18
+      ],
+      [
+        0.62,
+        0.69
+      ],
+      [
+        1.08,
+        1.11
+      ],
+      [
+        0.93,
+        0.96
+      ],
+      [
+        0.85,
+        0.86
+      ],
+      [
+        1.16,
+        1.31
+      ],
+      [
+        0.74,
+        0.6
+      ],
+      [
+        0.64,
+        0.67
+      ],
+      [
+        0.33,
+        0.2
+      ],
+      [
+        0.35,
+        0.4
+      ],
+      [
+        0.96,
+        0.73
+      ],
+      [
+        0.93,
+        0.91
+      ],
+      [
+        0.63,
+        0.71
+      ],
+      [
+        0.45,
+        0.63
+      ],
+      [
+        1.18,
+        1.31
+      ],
+      [
+        0.5,
+        0.62
+      ],
+      [
+        1.11,
+        1.01
+      ],
+      [
+        0.56,
+        0.48
+      ],
+      [
+        0.66,
+        0.69
+      ],
+      [
+        0.39,
+        0.37
+      ],
+      [
+        0.93,
+        0.94
+      ],
+      [
+        1.13,
+        1.14
+      ],
+      [
+        0.37,
+        0.28
+      ],
+      [
+        0.76,
+        0.71
+      ],
+      [
+        0.3,
+        0.36
+      ],
+      [
+        0.48,
+        0.51
+      ],
+      [
+        0.88,
+        0.86
+      ],
+      [
+        0.53,
+        0.37
+      ],
+      [
+        0.77,
+        0.74
+      ],
+      [
+        0.47,
+        0.52
+      ],
+      [
+        0.61,
+        0.66
+      ],
+      [
+        0.63,
+        0.64
+      ],
+      [
+        0.53,
+        0.54
+      ],
+      [
+        0.55,
+        0.72
+      ],
+      [
+        0.59,
+        0.53
+      ],
+      [
+        0.93,
+        0.98
+      ],
+      [
+        1.02,
+        1.16
+      ],
+      [
+        0.59,
+        0.41
+      ],
+      [
+        1.07,
+        1.04
+      ],
+      [
+        0.45,
+        0.46
+      ],
+      [
+        0.91,
+        0.81
+      ],
+      [
+        0.42,
+        0.56
+      ],
+      [
+        0.76,
+        0.82
+      ],
+      [
+        0.99,
+        0.95
+      ],
+      [
+        0.64,
+        0.63
+      ],
+      [
+        1.06,
+        1.14
+      ],
+      [
+        0.6,
+        0.52
+      ],
+      [
+        0.98,
+        1.08
+      ],
+      [
+        0.73,
+        0.8
+      ],
+      [
+        1.17,
+        1.29
+      ],
+      [
+        1.11,
+        1.12
+      ],
+      [
+        0.87,
+        0.86
+      ],
+      [
+        0.76,
+        0.73
+      ],
+      [
+        0.53,
+        0.44
+      ],
+      [
+        0.86,
+        0.83
+      ],
+      [
+        0.67,
+        0.71
+      ],
+      [
+        0.7,
+        0.53
+      ],
+      [
+        1.19,
+        1.19
+      ],
+      [
+        0.62,
+        0.53
+      ],
+      [
+        0.86,
+        0.8
+      ],
+      [
+        0.36,
+        0.35
+      ],
+      [
+        0.95,
+        1.01
+      ],
+      [
+        0.35,
+        0.46
+      ],
+      [
+        0.53,
+        0.66
+      ],
+      [
+        0.43,
+        0.53
+      ],
+      [
+        0.79,
+        0.78
+      ],
+      [
+        0.95,
+        1.08
+      ],
+      [
+        0.67,
+        0.66
+      ],
+      [
+        0.79,
+        0.85
+      ],
+      [
+        0.47,
+        0.34
+      ],
+      [
+        0.97,
+        1.15
+      ],
+      [
+        0.59,
+        0.66
+      ],
+      [
+        0.58,
+        0.47
+      ],
+      [
+        0.33,
+        0.27
+      ],
+      [
+        1.2,
+        1.21
+      ],
+      [
+        1.16,
+        0.98
+      ],
+      [
+        0.45,
+        0.28
+      ],
+      [
+        0.91,
+        0.87
+      ],
+      [
+        0.85,
+        0.82
+      ],
+      [
+        0.78,
+        0.62
+      ],
+      [
+        0.44,
+        0.58
+      ],
+      [
+        0.63,
+        0.64
+      ],
+      [
+        1.15,
+        1.32
+      ],
+      [
+        0.39,
+        0.22
+      ],
+      [
+        0.99,
+        1.13
+      ],
+      [
+        1.03,
+        1.04
+      ],
+      [
+        0.91,
+        0.82
+      ],
+      [
+        0.98,
+        0.84
+      ],
+      [
+        0.95,
+        0.96
+      ],
+      [
+        0.68,
+        0.68
+      ],
+      [
+        0.43,
+        0.55
+      ],
+      [
+        0.78,
+        0.9
+      ],
+      [
+        1.05,
+        1.09
+      ],
+      [
+        0.83,
+        0.84
+      ],
+      [
+        0.35,
+        0.4
+      ],
+      [
+        0.82,
+        0.79
+      ],
+      [
+        0.92,
+        0.79
+      ],
+      [
+        0.42,
+        0.49
+      ],
+      [
+        1.0,
+        0.97
+      ],
+      [
+        0.31,
+        0.39
+      ],
+      [
+        0.45,
+        0.36
+      ],
+      [
+        0.52,
+        0.62
+      ],
+      [
+        0.72,
+        0.82
+      ],
+      [
+        0.74,
+        0.81
+      ],
+      [
+        0.8,
+        0.86
+      ],
+      [
+        0.69,
+        0.53
+      ],
+      [
+        0.33,
+        0.46
+      ],
+      [
+        0.4,
+        0.41
+      ],
+      [
+        0.61,
+        0.66
+      ],
+      [
+        0.39,
+        0.5
+      ],
+      [
+        0.55,
+        0.59
+      ],
+      [
+        1.07,
+        1.13
+      ],
+      [
+        0.62,
+        0.55
+      ],
+      [
+        0.35,
+        0.38
+      ],
+      [
+        0.99,
+        0.99
+      ],
+      [
+        0.67,
+        0.6
+      ],
+      [
+        0.91,
+        0.91
+      ],
+      [
+        0.82,
+        0.76
+      ],
+      [
+        1.07,
+        0.96
+      ],
+      [
+        0.52,
+        0.36
+      ],
+      [
+        0.89,
+        0.94
+      ],
+      [
+        1.01,
+        0.99
+      ],
+      [
+        0.66,
+        0.55
+      ],
+      [
+        0.34,
+        0.34
+      ],
+      [
+        1.11,
+        1.0
+      ],
+      [
+        0.76,
+        0.81
+      ],
+      [
+        1.08,
+        1.07
+      ],
+      [
+        0.41,
+        0.41
+      ],
+      [
+        0.43,
+        0.45
+      ],
+      [
+        0.58,
+        0.58
+      ],
+      [
+        1.13,
+        0.85
+      ],
+      [
+        0.84,
+        0.82
+      ],
+      [
+        0.58,
+        0.48
+      ],
+      [
+        0.83,
+        0.86
+      ],
+      [
+        0.93,
+        1.0
+      ],
+      [
+        0.91,
+        0.82
+      ],
+      [
+        0.35,
+        0.42
+      ],
+      [
+        0.97,
+        0.98
+      ],
+      [
+        0.83,
+        0.81
+      ],
+      [
+        0.64,
+        0.63
+      ],
+      [
+        1.03,
+        1.06
+      ],
+      [
+        0.96,
+        0.91
+      ],
+      [
+        0.58,
+        0.6
+      ],
+      [
+        0.96,
+        1.16
+      ],
+      [
+        0.68,
+        0.67
+      ],
+      [
+        1.15,
+        1.2
+      ],
+      [
+        0.59,
+        0.58
+      ],
+      [
+        0.46,
+        0.37
+      ],
+      [
+        0.92,
+        0.83
+      ],
+      [
+        0.52,
+        0.57
+      ],
+      [
+        1.17,
+        1.06
+      ],
+      [
+        0.67,
+        0.68
+      ],
+      [
+        1.2,
+        1.29
+      ],
+      [
+        0.4,
+        0.27
+      ],
+      [
+        0.57,
+        0.5
+      ],
+      [
+        0.97,
+        1.06
+      ],
+      [
+        0.63,
+        0.61
+      ],
+      [
+        0.67,
+        0.74
+      ],
+      [
+        1.01,
+        0.99
+      ],
+      [
+        0.32,
+        0.17
+      ],
+      [
+        0.66,
+        0.84
+      ],
+      [
+        1.11,
+        1.06
+      ],
+      [
+        0.5,
+        0.52
+      ],
+      [
+        0.79,
+        0.81
+      ],
+      [
+        0.4,
+        0.3
+      ],
+      [
+        0.89,
+        0.85
+      ],
+      [
+        1.01,
+        0.96
+      ],
+      [
+        0.79,
+        0.61
+      ],
+      [
+        0.45,
+        0.52
+      ],
+      [
+        0.59,
+        0.74
+      ],
+      [
+        0.8,
+        0.8
+      ],
+      [
+        1.17,
+        1.11
+      ],
+      [
+        0.38,
+        0.24
+      ],
+      [
+        1.11,
+        1.08
+      ],
+      [
+        1.16,
+        1.14
+      ],
+      [
+        0.69,
+        0.64
+      ],
+      [
+        1.06,
+        0.77
+      ],
+      [
+        0.32,
+        0.23
+      ],
+      [
+        0.97,
+        1.16
+      ],
+      [
+        0.4,
+        0.23
+      ],
+      [
+        0.9,
+        1.06
+      ],
+      [
+        0.51,
+        0.35
+      ],
+      [
+        1.01,
+        1.0
+      ],
+      [
+        1.16,
+        1.11
+      ],
+      [
+        0.82,
+        0.65
+      ],
+      [
+        0.5,
+        0.51
+      ],
+      [
+        0.33,
+        0.33
+      ],
+      [
+        0.76,
+        0.86
+      ],
+      [
+        0.7,
+        0.79
+      ],
+      [
+        0.58,
+        0.55
+      ],
+      [
+        0.93,
+        0.94
+      ],
+      [
+        0.73,
+        0.64
+      ],
+      [
+        0.55,
+        0.56
+      ],
+      [
+        1.11,
+        1.08
+      ],
+      [
+        0.71,
+        0.63
+      ],
+      [
+        1.05,
+        1.08
+      ],
+      [
+        1.07,
+        1.09
+      ],
+      [
+        1.09,
+        1.06
+      ],
+      [
+        0.96,
+        1.04
+      ],
+      [
+        1.04,
+        0.94
+      ],
+      [
+        0.38,
+        0.36
+      ],
+      [
+        1.04,
+        1.03
+      ],
+      [
+        0.58,
+        0.65
+      ],
+      [
+        0.79,
+        0.73
+      ],
+      [
+        1.18,
+        1.08
+      ],
+      [
+        0.98,
+        1.05
+      ],
+      [
+        1.16,
+        1.09
+      ],
+      [
+        0.5,
+        0.5
+      ],
+      [
+        0.95,
+        0.87
+      ],
+      [
+        0.6,
+        0.6
+      ],
+      [
+        0.69,
+        0.67
+      ],
+      [
+        0.45,
+        0.3
+      ],
+      [
+        0.97,
+        0.78
+      ],
+      [
+        0.96,
+        0.91
+      ],
+      [
+        0.8,
+        0.88
+      ],
+      [
+        0.31,
+        0.1
+      ],
+      [
+        0.6,
+        0.55
+      ],
+      [
+        0.62,
+        0.74
+      ],
+      [
+        0.84,
+        0.62
+      ],
+      [
+        0.78,
+        0.58
+      ],
+      [
+        0.55,
+        0.67
+      ],
+      [
+        0.69,
+        0.74
+      ],
+      [
+        0.54,
+        0.62
+      ],
+      [
+        0.4,
+        0.37
+      ],
+      [
+        0.34,
+        0.16
+      ],
+      [
+        0.88,
+        0.87
+      ],
+      [
+        0.35,
+        0.46
+      ],
+      [
+        0.66,
+        0.77
+      ],
+      [
+        0.83,
+        0.84
+      ],
+      [
+        1.14,
+        0.97
+      ],
+      [
+        0.33,
+        0.25
+      ],
+      [
+        0.39,
+        0.23
+      ],
+      [
+        1.04,
+        1.14
+      ],
+      [
+        0.88,
+        0.83
+      ],
+      [
+        0.32,
+        0.23
+      ],
+      [
+        0.82,
+        0.91
+      ],
+      [
+        0.45,
+        0.35
+      ],
+      [
+        0.31,
+        0.23
+      ],
+      [
+        0.52,
+        0.5
+      ],
+      [
+        0.71,
+        0.71
+      ],
+      [
+        1.2,
+        0.96
+      ],
+      [
+        0.73,
+        0.63
+      ],
+      [
+        1.14,
+        1.0
+      ],
+      [
+        0.62,
+        0.59
+      ],
+      [
+        0.5,
+        0.61
+      ],
+      [
+        0.5,
+        0.36
+      ],
+      [
+        0.62,
+        0.64
+      ],
+      [
+        0.78,
+        0.9
+      ],
+      [
+        0.61,
+        0.42
+      ],
+      [
+        0.76,
+        0.86
+      ],
+      [
+        1.11,
+        1.11
+      ],
+      [
+        0.37,
+        0.41
+      ],
+      [
+        0.39,
+        0.35
+      ],
+      [
+        0.66,
+        0.67
+      ],
+      [
+        1.09,
+        1.09
+      ],
+      [
+        0.57,
+        0.61
+      ],
+      [
+        0.65,
+        0.66
+      ],
+      [
+        0.97,
+        0.64
+      ],
+      [
+        0.47,
+        0.58
+      ],
+      [
+        0.93,
+        1.01
+      ],
+      [
+        1.02,
+        1.03
+      ],
+      [
+        1.13,
+        1.09
+      ],
+      [
+        0.47,
+        0.58
+      ],
+      [
+        0.71,
+        0.81
+      ],
+      [
+        1.17,
+        1.14
+      ],
+      [
+        0.95,
+        0.96
+      ],
+      [
+        0.78,
+        0.71
+      ],
+      [
+        0.4,
+        0.27
+      ],
+      [
+        0.78,
+        0.73
+      ],
+      [
+        0.95,
+        0.88
+      ],
+      [
+        0.69,
+        0.83
+      ],
+      [
+        1.14,
+        1.15
+      ],
+      [
+        0.57,
+        0.53
+      ],
+      [
+        1.06,
+        1.04
+      ],
+      [
+        0.54,
+        0.52
+      ],
+      [
+        0.78,
+        0.63
+      ],
+      [
+        0.76,
+        0.67
+      ],
+      [
+        0.59,
+        0.52
+      ],
+      [
+        1.1,
+        0.98
+      ],
+      [
+        0.71,
+        0.49
+      ],
+      [
+        0.47,
+        0.57
+      ],
+      [
+        1.07,
+        0.99
+      ],
+      [
+        1.06,
+        1.05
+      ],
+      [
+        0.66,
+        0.58
+      ],
+      [
+        1.02,
+        1.11
+      ],
+      [
+        0.49,
+        0.58
+      ],
+      [
+        1.09,
+        1.21
+      ],
+      [
+        0.31,
+        0.21
+      ],
+      [
+        0.47,
+        0.4
+      ],
+      [
+        0.31,
+        0.11
+      ],
+      [
+        0.53,
+        0.27
+      ],
+      [
+        0.37,
+        0.23
+      ],
+      [
+        1.09,
+        1.3
+      ],
+      [
+        0.35,
+        0.29
+      ],
+      [
+        0.39,
+        0.29
+      ],
+      [
+        0.33,
+        0.36
+      ],
+      [
+        0.91,
+        0.76
+      ],
+      [
+        0.7,
+        0.56
+      ],
+      [
+        1.06,
+        0.91
+      ],
+      [
+        0.57,
+        0.55
+      ],
+      [
+        1.02,
+        1.15
+      ],
+      [
+        0.89,
+        0.93
+      ],
+      [
+        1.17,
+        1.06
+      ],
+      [
+        0.5,
+        0.55
+      ],
+      [
+        0.68,
+        0.49
+      ],
+      [
+        0.58,
+        0.55
+      ],
+      [
+        0.9,
+        0.81
+      ],
+      [
+        0.53,
+        0.46
+      ],
+      [
+        0.88,
+        0.84
+      ],
+      [
+        0.87,
+        0.89
+      ],
+      [
+        0.75,
+        0.69
+      ],
+      [
+        0.57,
+        0.46
+      ],
+      [
+        0.34,
+        0.33
+      ],
+      [
+        0.42,
+        0.37
+      ],
+      [
+        0.61,
+        0.62
+      ],
+      [
+        0.37,
+        0.42
+      ],
+      [
+        0.66,
+        0.78
+      ],
+      [
+        1.17,
+        1.14
+      ],
+      [
+        0.77,
+        0.74
+      ],
+      [
+        0.39,
+        0.31
+      ],
+      [
+        1.05,
+        1.03
+      ],
+      [
+        0.68,
+        0.76
+      ],
+      [
+        0.87,
+        0.75
+      ],
+      [
+        0.71,
+        0.81
+      ],
+      [
+        0.78,
+        0.61
+      ],
+      [
+        0.76,
+        0.62
+      ],
+      [
+        0.47,
+        0.3
+      ],
+      [
+        1.14,
+        1.11
+      ],
+      [
+        0.46,
+        0.54
+      ],
+      [
+        1.06,
+        0.95
+      ],
+      [
+        0.91,
+        0.89
+      ],
+      [
+        1.01,
+        1.05
+      ],
+      [
+        0.67,
+        0.67
+      ],
+      [
+        0.69,
+        0.62
+      ],
+      [
+        0.56,
+        0.56
+      ],
+      [
+        0.34,
+        0.4
+      ],
+      [
+        0.86,
+        0.86
+      ],
+      [
+        0.31,
+        0.14
+      ],
+      [
+        1.04,
+        1.17
+      ],
+      [
+        0.79,
+        0.89
+      ],
+      [
+        0.92,
+        0.88
+      ],
+      [
+        0.94,
+        0.98
+      ],
+      [
+        0.35,
+        0.33
+      ],
+      [
+        0.51,
+        0.47
+      ],
+      [
+        0.48,
+        0.55
+      ],
+      [
+        0.37,
+        0.44
+      ],
+      [
+        0.72,
+        0.72
+      ],
+      [
+        1.04,
+        1.02
+      ],
+      [
+        0.52,
+        0.49
+      ],
+      [
+        0.65,
+        0.59
+      ],
+      [
+        0.56,
+        0.69
+      ],
+      [
+        0.75,
+        0.8
+      ],
+      [
+        0.68,
+        0.71
+      ],
+      [
+        0.9,
+        0.86
+      ],
+      [
+        0.46,
+        0.21
+      ],
+      [
+        1.14,
+        1.11
+      ],
+      [
+        0.75,
+        0.78
+      ],
+      [
+        0.61,
+        0.64
+      ],
+      [
+        1.13,
+        1.01
+      ],
+      [
+        0.64,
+        0.58
+      ],
+      [
+        0.98,
+        0.86
+      ],
+      [
+        0.77,
+        0.72
+      ],
+      [
+        1.02,
+        0.96
+      ],
+      [
+        0.31,
+        0.34
+      ],
+      [
+        0.75,
+        0.68
+      ],
+      [
+        0.38,
+        0.39
+      ],
+      [
+        0.37,
+        0.37
+      ],
+      [
+        0.74,
+        0.86
+      ],
+      [
+        1.2,
+        1.35
+      ],
+      [
+        0.99,
+        0.89
+      ],
+      [
+        0.75,
+        0.67
+      ],
+      [
+        0.38,
+        0.27
+      ],
+      [
+        0.71,
+        0.65
+      ],
+      [
+        1.14,
+        1.18
+      ],
+      [
+        1.01,
+        0.96
+      ],
+      [
+        0.46,
+        0.44
+      ],
+      [
+        1.11,
+        1.32
+      ],
+      [
+        0.71,
+        0.64
+      ],
+      [
+        0.92,
+        1.01
+      ],
+      [
+        0.47,
+        0.28
+      ],
+      [
+        1.03,
+        0.95
+      ],
+      [
+        0.88,
+        1.04
+      ],
+      [
+        1.11,
+        1.09
+      ],
+      [
+        1.06,
+        1.23
+      ],
+      [
+        0.3,
+        0.31
+      ],
+      [
+        0.4,
+        0.39
+      ],
+      [
+        0.84,
+        0.87
+      ],
+      [
+        0.33,
+        0.26
+      ],
+      [
+        1.11,
+        1.04
+      ],
+      [
+        0.53,
+        0.5
+      ],
+      [
+        1.03,
+        1.22
+      ],
+      [
+        0.66,
+        0.54
+      ],
+      [
+        0.77,
+        0.62
+      ],
+      [
+        1.17,
+        1.21
+      ],
+      [
+        0.43,
+        0.36
+      ],
+      [
+        0.59,
+        0.43
+      ],
+      [
+        0.73,
+        0.81
+      ],
+      [
+        0.36,
+        0.43
+      ],
+      [
+        0.32,
+        0.19
+      ],
+      [
+        0.92,
+        0.96
+      ],
+      [
+        0.98,
+        1.0
+      ],
+      [
+        0.96,
+        0.78
+      ],
+      [
+        0.74,
+        0.65
+      ],
+      [
+        1.01,
+        0.87
+      ],
+      [
+        0.44,
+        0.36
+      ],
+      [
+        0.41,
+        0.48
+      ],
+      [
+        0.96,
+        0.94
+      ],
+      [
+        1.1,
+        1.06
+      ],
+      [
+        1.14,
+        1.13
+      ],
+      [
+        0.67,
+        0.67
+      ],
+      [
+        0.66,
+        0.66
+      ],
+      [
+        0.51,
+        0.35
+      ],
+      [
+        1.17,
+        1.37
+      ],
+      [
+        0.72,
+        0.72
+      ],
+      [
+        1.19,
+        1.2
+      ],
+      [
+        0.73,
+        0.85
+      ],
+      [
+        0.64,
+        0.61
+      ],
+      [
+        0.73,
+        0.77
+      ],
+      [
+        0.5,
+        0.46
+      ],
+      [
+        0.89,
+        0.85
+      ],
+      [
+        1.04,
+        1.04
+      ],
+      [
+        0.62,
+        0.6
+      ],
+      [
+        0.93,
+        0.85
+      ],
+      [
+        0.43,
+        0.32
+      ],
+      [
+        0.8,
+        0.73
+      ],
+      [
+        0.92,
+        0.87
+      ],
+      [
+        0.67,
+        0.55
+      ],
+      [
+        0.49,
+        0.59
+      ],
+      [
+        0.37,
+        0.18
+      ],
+      [
+        0.64,
+        0.56
+      ],
+      [
+        1.02,
+        1.28
+      ],
+      [
+        0.43,
+        0.3
+      ],
+      [
+        0.98,
+        1.01
+      ],
+      [
+        0.59,
+        0.61
+      ],
+      [
+        1.02,
+        0.91
+      ],
+      [
+        0.86,
+        0.88
+      ],
+      [
+        0.94,
+        1.04
+      ],
+      [
+        0.93,
+        1.18
+      ],
+      [
+        0.7,
+        0.64
+      ],
+      [
+        0.68,
+        0.7
+      ],
+      [
+        1.14,
+        1.35
+      ],
+      [
+        0.98,
+        0.86
+      ],
+      [
+        1.18,
+        1.3
+      ],
+      [
+        0.37,
+        0.28
+      ],
+      [
+        0.37,
+        0.12
+      ],
+      [
+        0.66,
+        0.71
+      ],
+      [
+        0.86,
+        0.94
+      ],
+      [
+        0.77,
+        0.66
+      ],
+      [
+        1.14,
+        1.24
+      ],
+      [
+        0.48,
+        0.41
+      ],
+      [
+        0.64,
+        0.67
+      ],
+      [
+        0.93,
+        1.1
+      ],
+      [
+        0.75,
+        0.73
+      ],
+      [
+        0.83,
+        0.8
+      ],
+      [
+        0.89,
+        0.81
+      ],
+      [
+        0.31,
+        0.29
+      ],
+      [
+        1.2,
+        1.2
+      ],
+      [
+        0.97,
+        1.2
+      ],
+      [
+        0.63,
+        0.69
+      ],
+      [
+        0.91,
+        0.74
+      ],
+      [
+        0.77,
+        0.77
+      ],
+      [
+        0.71,
+        0.61
+      ],
+      [
+        1.18,
+        1.2
+      ],
+      [
+        0.41,
+        0.41
+      ],
+      [
+        0.6,
+        0.59
+      ],
+      [
+        0.62,
+        0.75
+      ],
+      [
+        0.57,
+        0.67
+      ],
+      [
+        0.6,
+        0.52
+      ],
+      [
+        0.47,
+        0.47
+      ],
+      [
+        0.75,
+        0.63
+      ],
+      [
+        1.03,
+        1.1
+      ],
+      [
+        0.83,
+        0.87
+      ],
+      [
+        0.68,
+        0.9
+      ],
+      [
+        0.39,
+        0.35
+      ],
+      [
+        1.14,
+        1.14
+      ],
+      [
+        0.34,
+        0.31
+      ],
+      [
+        0.59,
+        0.64
+      ],
+      [
+        0.74,
+        0.77
+      ],
+      [
+        1.04,
+        1.16
+      ],
+      [
+        0.51,
+        0.25
+      ],
+      [
+        1.19,
+        1.06
+      ],
+      [
+        0.33,
+        0.44
+      ],
+      [
+        0.51,
+        0.63
+      ],
+      [
+        1.07,
+        1.05
+      ],
+      [
+        0.58,
+        0.5
+      ],
+      [
+        0.49,
+        0.45
+      ],
+      [
+        0.88,
+        0.87
+      ],
+      [
+        1.18,
+        1.11
+      ],
+      [
+        0.37,
+        0.21
+      ],
+      [
+        1.06,
+        0.93
+      ],
+      [
+        0.47,
+        0.39
+      ],
+      [
+        0.33,
+        0.41
+      ],
+      [
+        0.97,
+        1.03
+      ],
+      [
+        0.76,
+        0.86
+      ],
+      [
+        0.62,
+        0.66
+      ],
+      [
+        0.63,
+        0.66
+      ],
+      [
+        0.61,
+        0.64
+      ],
+      [
+        0.56,
+        0.42
+      ],
+      [
+        1.12,
+        1.11
+      ],
+      [
+        1.04,
+        0.98
+      ],
+      [
+        0.53,
+        0.52
+      ],
+      [
+        0.45,
+        0.18
+      ],
+      [
+        1.15,
+        0.96
+      ],
+      [
+        0.73,
+        0.61
+      ],
+      [
+        0.47,
+        0.54
+      ],
+      [
+        0.82,
+        0.76
+      ],
+      [
+        0.5,
+        0.47
+      ],
+      [
+        0.94,
+        0.97
+      ],
+      [
+        0.51,
+        0.47
+      ],
+      [
+        0.76,
+        0.57
+      ],
+      [
+        0.94,
+        0.94
+      ],
+      [
+        0.96,
+        0.89
+      ],
+      [
+        0.94,
+        0.93
+      ],
+      [
+        0.33,
+        0.31
+      ],
+      [
+        0.61,
+        0.61
+      ],
+      [
+        1.05,
+        1.09
+      ],
+      [
+        0.98,
+        1.09
+      ],
+      [
+        1.09,
+        1.13
+      ],
+      [
+        0.47,
+        0.35
+      ],
+      [
+        1.19,
+        1.17
+      ],
+      [
+        0.93,
+        0.94
+      ],
+      [
+        0.57,
+        0.6
+      ],
+      [
+        1.15,
+        1.2
+      ],
+      [
+        0.99,
+        1.19
+      ],
+      [
+        0.82,
+        0.79
+      ],
+      [
+        0.32,
+        0.35
+      ],
+      [
+        0.53,
+        0.53
+      ],
+      [
+        0.53,
+        0.47
+      ],
+      [
+        1.19,
+        1.31
+      ],
+      [
+        0.36,
+        0.43
+      ],
+      [
+        0.8,
+        0.87
+      ],
+      [
+        0.42,
+        0.38
+      ],
+      [
+        0.78,
+        0.94
+      ],
+      [
+        1.05,
+        0.96
+      ],
+      [
+        0.85,
+        0.98
+      ],
+      [
+        0.71,
+        0.66
+      ],
+      [
+        0.72,
+        0.72
+      ],
+      [
+        0.67,
+        0.69
+      ],
+      [
+        0.55,
+        0.54
+      ],
+      [
+        0.73,
+        0.82
+      ],
+      [
+        1.17,
+        1.12
+      ],
+      [
+        1.06,
+        0.86
+      ],
+      [
+        0.54,
+        0.66
+      ],
+      [
+        0.36,
+        0.23
+      ],
+      [
+        0.51,
+        0.45
+      ],
+      [
+        0.8,
+        0.93
+      ],
+      [
+        0.69,
+        0.68
+      ],
+      [
+        0.91,
+        0.99
+      ],
+      [
+        1.14,
+        1.11
+      ],
+      [
+        0.4,
+        0.36
+      ],
+      [
+        0.65,
+        0.73
+      ],
+      [
+        0.54,
+        0.45
+      ],
+      [
+        0.43,
+        0.4
+      ],
+      [
+        0.8,
+        0.58
+      ],
+      [
+        1.01,
+        0.94
+      ],
+      [
+        0.91,
+        0.79
+      ],
+      [
+        1.14,
+        1.13
+      ],
+      [
+        0.67,
+        0.64
+      ],
+      [
+        0.92,
+        1.01
+      ],
+      [
+        1.08,
+        1.01
+      ],
+      [
+        0.7,
+        0.6
+      ],
+      [
+        0.61,
+        0.64
+      ],
+      [
+        0.39,
+        0.34
+      ],
+      [
+        0.33,
+        0.27
+      ],
+      [
+        1.05,
+        1.25
+      ],
+      [
+        0.58,
+        0.66
+      ],
+      [
+        0.44,
+        0.39
+      ],
+      [
+        0.53,
+        0.56
+      ],
+      [
+        0.73,
+        0.87
+      ],
+      [
+        0.9,
+        0.86
+      ],
+      [
+        0.31,
+        0.39
+      ],
+      [
+        0.34,
+        0.38
+      ],
+      [
+        0.71,
+        0.91
+      ],
+      [
+        0.75,
+        0.57
+      ],
+      [
+        0.88,
+        0.89
+      ],
+      [
+        0.73,
+        0.6
+      ],
+      [
+        0.5,
+        0.25
+      ],
+      [
+        0.35,
+        0.28
+      ],
+      [
+        0.36,
+        0.28
+      ],
+      [
+        1.12,
+        1.16
+      ],
+      [
+        1.12,
+        1.22
+      ],
+      [
+        0.43,
+        0.43
+      ],
+      [
+        0.89,
+        0.97
+      ],
+      [
+        0.98,
+        1.0
+      ],
+      [
+        0.31,
+        0.39
+      ],
+      [
+        0.38,
+        0.45
+      ],
+      [
+        0.57,
+        0.39
+      ],
+      [
+        0.58,
+        0.55
+      ],
+      [
+        1.06,
+        1.03
+      ],
+      [
+        0.35,
+        0.28
+      ],
+      [
+        0.83,
+        0.93
+      ],
+      [
+        0.89,
+        0.86
+      ],
+      [
+        0.63,
+        0.49
+      ],
+      [
+        1.01,
+        1.03
+      ],
+      [
+        0.5,
+        0.56
+      ],
+      [
+        0.68,
+        0.76
+      ],
+      [
+        1.13,
+        1.09
+      ],
+      [
+        0.7,
+        0.93
+      ],
+      [
+        1.07,
+        0.98
+      ],
+      [
+        1.12,
+        1.01
+      ],
+      [
+        0.81,
+        0.79
+      ],
+      [
+        0.47,
+        0.29
+      ],
+      [
+        0.83,
+        0.95
+      ],
+      [
+        0.56,
+        0.54
+      ],
+      [
+        0.73,
+        0.64
+      ],
+      [
+        0.77,
+        0.6
+      ],
+      [
+        0.39,
+        0.39
+      ],
+      [
+        0.4,
+        0.41
+      ],
+      [
+        0.68,
+        0.67
+      ],
+      [
+        0.53,
+        0.34
+      ],
+      [
+        0.53,
+        0.61
+      ],
+      [
+        0.55,
+        0.46
+      ],
+      [
+        0.89,
+        0.76
+      ],
+      [
+        0.94,
+        0.81
+      ],
+      [
+        0.34,
+        0.39
+      ],
+      [
+        0.7,
+        0.72
+      ],
+      [
+        0.97,
+        1.13
+      ],
+      [
+        0.42,
+        0.3
+      ],
+      [
+        0.89,
+        1.05
+      ],
+      [
+        0.75,
+        0.77
+      ],
+      [
+        0.4,
+        0.38
+      ],
+      [
+        0.83,
+        0.83
+      ],
+      [
+        0.57,
+        0.57
+      ],
+      [
+        0.37,
+        0.2
+      ],
+      [
+        0.86,
+        0.87
+      ],
+      [
+        0.87,
+        0.76
+      ],
+      [
+        1.04,
+        0.95
+      ],
+      [
+        0.66,
+        0.72
+      ],
+      [
+        0.56,
+        0.57
+      ],
+      [
+        0.91,
+        0.95
+      ],
+      [
+        0.98,
+        0.96
+      ],
+      [
+        0.5,
+        0.43
+      ],
+      [
+        0.32,
+        0.26
+      ],
+      [
+        0.9,
+        0.94
+      ],
+      [
+        0.54,
+        0.6
+      ],
+      [
+        1.01,
+        0.99
+      ],
+      [
+        0.91,
+        0.93
+      ],
+      [
+        0.55,
+        0.64
+      ],
+      [
+        0.8,
+        0.85
+      ],
+      [
+        0.79,
+        0.66
+      ],
+      [
+        0.43,
+        0.49
+      ],
+      [
+        0.71,
+        0.63
+      ],
+      [
+        0.7,
+        0.52
+      ],
+      [
+        0.7,
+        0.71
+      ],
+      [
+        0.6,
+        0.67
+      ],
+      [
+        0.81,
+        0.74
+      ],
+      [
+        0.42,
+        0.31
+      ],
+      [
+        0.37,
+        0.24
+      ],
+      [
+        0.91,
+        1.0
+      ],
+      [
+        0.72,
+        0.64
+      ],
+      [
+        0.41,
+        0.46
+      ],
+      [
+        0.81,
+        0.74
+      ],
+      [
+        0.45,
+        0.57
+      ],
+      [
+        0.94,
+        1.0
+      ],
+      [
+        0.56,
+        0.56
+      ],
+      [
+        0.43,
+        0.45
+      ],
+      [
+        0.64,
+        0.58
+      ],
+      [
+        0.47,
+        0.43
+      ],
+      [
+        0.32,
+        0.24
+      ],
+      [
+        1.12,
+        1.05
+      ],
+      [
+        0.81,
+        0.67
+      ],
+      [
+        0.58,
+        0.67
+      ],
+      [
+        0.97,
+        0.81
+      ],
+      [
+        1.14,
+        1.04
+      ],
+      [
+        0.96,
+        0.9
+      ],
+      [
+        0.82,
+        0.81
+      ],
+      [
+        0.94,
+        1.06
+      ],
+      [
+        1.12,
+        1.17
+      ],
+      [
+        0.45,
+        0.34
+      ],
+      [
+        0.9,
+        0.81
+      ],
+      [
+        0.33,
+        0.31
+      ],
+      [
+        0.58,
+        0.7
+      ],
+      [
+        0.62,
+        0.53
+      ],
+      [
+        0.49,
+        0.58
+      ],
+      [
+        0.86,
+        0.99
+      ],
+      [
+        0.91,
+        0.83
+      ],
+      [
+        0.53,
+        0.46
+      ],
+      [
+        0.47,
+        0.33
+      ],
+      [
+        0.88,
+        0.91
+      ],
+      [
+        0.8,
+        0.62
+      ],
+      [
+        0.68,
+        0.56
+      ],
+      [
+        0.93,
+        0.84
+      ],
+      [
+        0.88,
+        1.0
+      ],
+      [
+        0.74,
+        0.76
+      ],
+      [
+        0.57,
+        0.61
+      ],
+      [
+        0.57,
+        0.57
+      ],
+      [
+        0.33,
+        0.22
+      ],
+      [
+        0.9,
+        0.79
+      ],
+      [
+        0.53,
+        0.48
+      ],
+      [
+        0.62,
+        0.64
+      ],
+      [
+        1.07,
+        1.0
+      ],
+      [
+        0.75,
+        0.66
+      ],
+      [
+        0.46,
+        0.62
+      ],
+      [
+        0.78,
+        0.66
+      ],
+      [
+        0.61,
+        0.55
+      ],
+      [
+        0.39,
+        0.44
+      ],
+      [
+        1.04,
+        1.16
+      ],
+      [
+        0.94,
+        0.88
+      ],
+      [
+        0.6,
+        0.55
+      ],
+      [
+        0.8,
+        0.8
+      ],
+      [
+        0.84,
+        0.81
+      ],
+      [
+        1.08,
+        1.05
+      ],
+      [
+        0.94,
+        0.86
+      ],
+      [
+        1.01,
+        0.94
+      ],
+      [
+        0.88,
+        0.82
+      ],
+      [
+        0.9,
+        0.78
+      ],
+      [
+        1.09,
+        1.09
+      ],
+      [
+        0.91,
+        0.81
+      ],
+      [
+        0.47,
+        0.44
+      ],
+      [
+        1.05,
+        1.09
+      ],
+      [
+        1.2,
+        1.19
+      ],
+      [
+        0.39,
+        0.32
+      ],
+      [
+        0.55,
+        0.55
+      ],
+      [
+        0.86,
+        0.69
+      ],
+      [
+        0.87,
+        0.81
+      ],
+      [
+        0.33,
+        0.39
+      ],
+      [
+        1.16,
+        1.12
+      ],
+      [
+        1.16,
+        1.3
+      ],
+      [
+        0.54,
+        0.55
+      ],
+      [
+        0.75,
+        0.76
+      ],
+      [
+        0.91,
+        0.91
+      ],
+      [
+        1.02,
+        1.06
+      ],
+      [
+        0.51,
+        0.61
+      ],
+      [
+        1.13,
+        1.13
+      ],
+      [
+        0.76,
+        0.72
+      ],
+      [
+        1.07,
+        1.15
+      ],
+      [
+        0.42,
+        0.38
+      ],
+      [
+        1.09,
+        1.1
+      ],
+      [
+        0.79,
+        0.89
+      ],
+      [
+        0.5,
+        0.59
+      ],
+      [
+        0.32,
+        0.22
+      ],
+      [
+        1.2,
+        1.33
+      ],
+      [
+        0.91,
+        0.83
+      ],
+      [
+        1.06,
+        1.0
+      ],
+      [
+        0.6,
+        0.69
+      ],
+      [
+        0.55,
+        0.64
+      ],
+      [
+        0.55,
+        0.56
+      ],
+      [
+        0.51,
+        0.55
+      ],
+      [
+        0.77,
+        0.67
+      ],
+      [
+        0.69,
+        0.62
+      ],
+      [
+        0.99,
+        0.95
+      ],
+      [
+        0.69,
+        0.68
+      ],
+      [
+        0.54,
+        0.66
+      ],
+      [
+        1.09,
+        1.06
+      ],
+      [
+        0.63,
+        0.85
+      ],
+      [
+        0.79,
+        0.74
+      ],
+      [
+        0.73,
+        0.84
+      ],
+      [
+        0.77,
+        0.92
+      ],
+      [
+        0.42,
+        0.57
+      ],
+      [
+        0.78,
+        0.65
+      ],
+      [
+        1.17,
+        1.25
+      ],
+      [
+        1.03,
+        0.94
+      ],
+      [
+        0.69,
+        0.56
+      ]
+    ],
+    "spike": [
+      [
+        0.36,
+        0.3
+      ],
+      [
+        0.58,
+        0.86
+      ],
+      [
+        0.34,
+        0.51
+      ],
+      [
+        0.52,
+        0.77
+      ],
+      [
+        0.39,
+        0.57
+      ],
+      [
+        0.35,
+        0.59
+      ],
+      [
+        0.39,
+        0.58
+      ],
+      [
+        0.32,
+        0.5
+      ],
+      [
+        0.33,
+        0.59
+      ],
+      [
+        0.5,
+        0.74
+      ],
+      [
+        0.52,
+        0.76
+      ],
+      [
+        0.33,
+        0.51
+      ],
+      [
+        0.39,
+        0.55
+      ],
+      [
+        0.42,
+        0.67
+      ],
+      [
+        0.3,
+        0.45
+      ],
+      [
+        0.4,
+        0.67
+      ],
+      [
+        0.37,
+        0.52
+      ],
+      [
+        0.31,
+        0.47
+      ],
+      [
+        0.37,
+        0.55
+      ],
+      [
+        0.32,
+        0.46
+      ],
+      [
+        0.35,
+        0.53
+      ],
+      [
+        0.31,
+        0.48
+      ],
+      [
+        0.36,
+        0.53
+      ],
+      [
+        0.36,
+        0.53
+      ],
+      [
+        0.4,
+        0.62
+      ],
+      [
+        0.3,
+        0.51
+      ],
+      [
+        0.36,
+        0.51
+      ],
+      [
+        0.66,
+        0.97
+      ],
+      [
+        0.36,
+        0.51
+      ],
+      [
+        0.39,
+        0.6
+      ],
+      [
+        0.33,
+        0.53
+      ],
+      [
+        0.34,
+        0.49
+      ],
+      [
+        0.33,
+        0.49
+      ],
+      [
+        0.38,
+        0.66
+      ],
+      [
+        0.4,
+        0.66
+      ],
+      [
+        0.51,
+        0.74
+      ],
+      [
+        0.44,
+        0.68
+      ],
+      [
+        0.35,
+        0.5
+      ],
+      [
+        0.39,
+        0.6
+      ],
+      [
+        0.45,
+        0.71
+      ],
+      [
+        0.42,
+        0.66
+      ],
+      [
+        0.31,
+        0.47
+      ],
+      [
+        0.48,
+        0.72
+      ],
+      [
+        0.38,
+        0.55
+      ],
+      [
+        0.45,
+        0.7
+      ],
+      [
+        0.35,
+        0.58
+      ],
+      [
+        0.35,
+        0.53
+      ],
+      [
+        0.33,
+        0.47
+      ],
+      [
+        0.31,
+        0.48
+      ],
+      [
+        0.42,
+        0.62
+      ],
+      [
+        0.38,
+        0.58
+      ],
+      [
+        0.36,
+        0.58
+      ],
+      [
+        0.6,
+        0.86
+      ],
+      [
+        0.35,
+        0.49
+      ],
+      [
+        0.38,
+        0.54
+      ],
+      [
+        0.35,
+        0.54
+      ],
+      [
+        0.39,
+        0.58
+      ],
+      [
+        0.63,
+        0.92
+      ],
+      [
+        0.37,
+        0.54
+      ],
+      [
+        0.32,
+        0.45
+      ],
+      [
+        0.5,
+        0.72
+      ],
+      [
+        0.44,
+        0.66
+      ],
+      [
+        0.35,
+        0.57
+      ],
+      [
+        0.4,
+        0.58
+      ],
+      [
+        0.39,
+        0.57
+      ],
+      [
+        0.35,
+        0.56
+      ],
+      [
+        0.39,
+        0.57
+      ],
+      [
+        0.61,
+        0.86
+      ],
+      [
+        0.38,
+        0.6
+      ],
+      [
+        0.33,
+        0.59
+      ],
+      [
+        0.36,
+        0.56
+      ],
+      [
+        0.59,
+        0.83
+      ],
+      [
+        0.31,
+        0.45
+      ],
+      [
+        0.54,
+        0.78
+      ],
+      [
+        0.41,
+        0.58
+      ],
+      [
+        0.31,
+        0.45
+      ],
+      [
+        0.4,
+        0.59
+      ],
+      [
+        0.35,
+        0.49
+      ],
+      [
+        0.38,
+        0.61
+      ],
+      [
+        0.47,
+        0.66
+      ],
+      [
+        0.47,
+        0.69
+      ],
+      [
+        0.77,
+        1.11
+      ],
+      [
+        0.59,
+        0.84
+      ],
+      [
+        0.49,
+        0.76
+      ],
+      [
+        0.39,
+        0.57
+      ],
+      [
+        0.43,
+        0.61
+      ],
+      [
+        0.33,
+        0.52
+      ],
+      [
+        0.45,
+        0.64
+      ],
+      [
+        0.35,
+        0.53
+      ],
+      [
+        0.36,
+        0.53
+      ],
+      [
+        0.51,
+        0.72
+      ],
+      [
+        0.5,
+        0.73
+      ],
+      [
+        0.35,
+        0.52
+      ],
+      [
+        0.3,
+        0.49
+      ],
+      [
+        0.38,
+        0.58
+      ],
+      [
+        0.3,
+        0.59
+      ],
+      [
+        0.39,
+        0.62
+      ],
+      [
+        0.43,
+        0.68
+      ],
+      [
+        0.3,
+        0.51
+      ],
+      [
+        0.34,
+        0.49
+      ],
+      [
+        0.53,
+        0.75
+      ],
+      [
+        0.41,
+        0.58
+      ],
+      [
+        0.36,
+        0.55
+      ],
+      [
+        0.31,
+        0.6
+      ],
+      [
+        0.32,
+        0.52
+      ],
+      [
+        0.54,
+        0.85
+      ],
+      [
+        0.41,
+        0.7
+      ],
+      [
+        0.34,
+        0.51
+      ],
+      [
+        0.48,
+        0.7
+      ],
+      [
+        0.37,
+        0.53
+      ],
+      [
+        0.36,
+        0.53
+      ],
+      [
+        0.35,
+        0.49
+      ],
+      [
+        0.33,
+        0.53
+      ],
+      [
+        0.5,
+        0.72
+      ]
+    ],
+    "ceiling": 1.44,
+    "multiplier": 1.4
+  },
+  "latency_hist": {
+    "counts": [
+      1,
+      5,
+      15,
+      15,
+      22,
+      19,
+      15,
+      13,
+      5,
+      1
+    ],
+    "edges": [
+      -10,
+      -5,
+      0,
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40
+    ],
+    "median": 14.4
+  },
+  "waste_vs_pct": [
+    {
+      "excess_pct": 51.429,
+      "excess_kwh": 0.18,
+      "customer_id": "CUST016",
+      "reason_detected": "Guest visit"
+    },
+    {
+      "excess_pct": 55.556,
+      "excess_kwh": 0.25,
+      "customer_id": "CUST008",
+      "reason_detected": "Guest visit"
+    },
+    {
+      "excess_pct": 60.526,
+      "excess_kwh": 0.23,
+      "customer_id": "CUST014",
+      "reason_detected": "Guest visit"
+    },
+    {
+      "excess_pct": 46.154,
+      "excess_kwh": 0.18,
+      "customer_id": "CUST015",
+      "reason_detected": "Overnight appliance"
+    },
+    {
+      "excess_pct": 56.25,
+      "excess_kwh": 0.18,
+      "customer_id": "CUST002",
+      "reason_detected": "Schedule change"
+    },
+    {
+      "excess_pct": 63.333,
+      "excess_kwh": 0.19,
+      "customer_id": "CUST018",
+      "reason_detected": "Schedule change"
+    },
+    {
+      "excess_pct": 60.606,
+      "excess_kwh": 0.2,
+      "customer_id": "CUST006",
+      "reason_detected": "Overnight appliance"
+    },
+    {
+      "excess_pct": 45.161,
+      "excess_kwh": 0.14,
+      "customer_id": "CUST013",
+      "reason_detected": "Heater malfunction"
+    },
+    {
+      "excess_pct": 41.509,
+      "excess_kwh": 0.22,
+      "customer_id": "CUST019",
+      "reason_detected": "Schedule change"
+    },
+    {
+      "excess_pct": 47.222,
+      "excess_kwh": 0.17,
+      "customer_id": "CUST005",
+      "reason_detected": "Schedule change"
+    },
+    {
+      "excess_pct": -16.667,
+      "excess_kwh": -0.06,
+      "customer_id": "CUST001",
+      "reason_detected": NaN
+    },
+    {
+      "excess_pct": 47.222,
+      "excess_kwh": 0.17,
+      "customer_id": "CUST005",
+      "reason_detected": "Guest visit"
+    },
+    {
+      "excess_pct": 48.276,
+      "excess_kwh": 0.28,
+      "customer_id": "CUST001",
+      "reason_detected": "Schedule change"
+    },
+    {
+      "excess_pct": 44.444,
+      "excess_kwh": 0.24,
+      "customer_id": "CUST013",
+      "reason_detected": "Overnight appliance"
+    },
+    {
+      "excess_pct": 41.026,
+      "excess_kwh": 0.16,
+      "customer_id": "CUST003",
+      "reason_detected": "Heater malfunction"
+    },
+    {
+      "excess_pct": 78.788,
+      "excess_kwh": 0.26,
+      "customer_id": "CUST002",
+      "reason_detected": "Schedule change"
+    },
+    {
+      "excess_pct": 41.463,
+      "excess_kwh": 0.17,
+      "customer_id": "CUST013",
+      "reason_detected": "Schedule change"
+    },
+    {
+      "excess_pct": 44.118,
+      "excess_kwh": 0.15,
+      "customer_id": "CUST006",
+      "reason_detected": "Heater malfunction"
+    },
+    {
+      "excess_pct": 52.632,
+      "excess_kwh": 0.2,
+      "customer_id": "CUST018",
+      "reason_detected": "Schedule change"
+    },
+    {
+      "excess_pct": 59.524,
+      "excess_kwh": 0.25,
+      "customer_id": "CUST003",
+      "reason_detected": "Guest visit"
+    },
+    {
+      "excess_pct": 62.5,
+      "excess_kwh": 0.2,
+      "customer_id": "CUST020",
+      "reason_detected": "Heater malfunction"
+    },
+    {
+      "excess_pct": 65.714,
+      "excess_kwh": 0.23,
+      "customer_id": "CUST008",
+      "reason_detected": "Heater malfunction"
+    },
+    {
+      "excess_pct": 55.0,
+      "excess_kwh": 0.22,
+      "customer_id": "CUST005",
+      "reason_detected": "Schedule change"
+    },
+    {
+      "excess_pct": 40.625,
+      "excess_kwh": 0.13,
+      "customer_id": "CUST011",
+      "reason_detected": "Overnight appliance"
+    },
+    {
+      "excess_pct": 44.0,
+      "excess_kwh": 0.22,
+      "customer_id": "CUST011",
+      "reason_detected": "Overnight appliance"
+    },
+    {
+      "excess_pct": 50.0,
+      "excess_kwh": 0.17,
+      "customer_id": "CUST001",
+      "reason_detected": "Heater malfunction"
+    },
+    {
+      "excess_pct": 61.111,
+      "excess_kwh": 0.22,
+      "customer_id": "CUST009",
+      "reason_detected": "Guest visit"
+    },
+    {
+      "excess_pct": 96.667,
+      "excess_kwh": 0.29,
+      "customer_id": "CUST018",
+      "reason_detected": "Guest visit"
+    },
+    {
+      "excess_pct": 48.077,
+      "excess_kwh": 0.25,
+      "customer_id": "CUST001",
+      "reason_detected": "Guest visit"
+    },
+    {
+      "excess_pct": 48.485,
+      "excess_kwh": 0.16,
+      "customer_id": "CUST006",
+      "reason_detected": "Overnight appliance"
+    },
+    {
+      "excess_pct": 40.984,
+      "excess_kwh": 0.25,
+      "customer_id": "CUST012",
+      "reason_detected": "Overnight appliance"
+    },
+    {
+      "excess_pct": 50.0,
+      "excess_kwh": 0.22,
+      "customer_id": "CUST011",
+      "reason_detected": "Heater malfunction"
+    },
+    {
+      "excess_pct": 51.613,
+      "excess_kwh": 0.16,
+      "customer_id": "CUST007",
+      "reason_detected": "Guest visit"
+    },
+    {
+      "excess_pct": 40.541,
+      "excess_kwh": 0.15,
+      "customer_id": "CUST004",
+      "reason_detected": "Schedule change"
+    },
+    {
+      "excess_pct": 70.0,
+      "excess_kwh": 0.21,
+      "customer_id": "CUST005",
+      "reason_detected": "Overnight appliance"
+    },
+    {
+      "excess_pct": 45.161,
+      "excess_kwh": 0.14,
+      "customer_id": "CUST013",
+      "reason_detected": "Heater malfunction"
+    },
+    {
+      "excess_pct": 41.667,
+      "excess_kwh": 0.15,
+      "customer_id": "CUST005",
+      "reason_detected": "Schedule change"
+    },
+    {
+      "excess_pct": 51.429,
+      "excess_kwh": 0.18,
+      "customer_id": "CUST008",
+      "reason_detected": "Heater malfunction"
+    },
+    {
+      "excess_pct": 40.426,
+      "excess_kwh": 0.19,
+      "customer_id": "CUST014",
+      "reason_detected": "Overnight appliance"
+    },
+    {
+      "excess_pct": 46.154,
+      "excess_kwh": 0.18,
+      "customer_id": "CUST001",
+      "reason_detected": "Schedule change"
+    },
+    {
+      "excess_pct": 62.857,
+      "excess_kwh": 0.22,
+      "customer_id": "CUST011",
+      "reason_detected": "Schedule change"
+    },
+    {
+      "excess_pct": 41.86,
+      "excess_kwh": 0.18,
+      "customer_id": "CUST015",
+      "reason_detected": "Overnight appliance"
+    },
+    {
+      "excess_pct": 41.463,
+      "excess_kwh": 0.17,
+      "customer_id": "CUST019",
+      "reason_detected": "Guest visit"
+    },
+    {
+      "excess_pct": 58.974,
+      "excess_kwh": 0.23,
+      "customer_id": "CUST018",
+      "reason_detected": "Heater malfunction"
+    },
+    {
+      "excess_pct": 45.0,
+      "excess_kwh": 0.18,
+      "customer_id": "CUST011",
+      "reason_detected": "Schedule change"
+    },
+    {
+      "excess_pct": 68.571,
+      "excess_kwh": 0.24,
+      "customer_id": "CUST001",
+      "reason_detected": "Overnight appliance"
+    },
+    {
+      "excess_pct": 48.0,
+      "excess_kwh": 0.24,
+      "customer_id": "CUST002",
+      "reason_detected": "Overnight appliance"
+    },
+    {
+      "excess_pct": 50.0,
+      "excess_kwh": 0.24,
+      "customer_id": "CUST007",
+      "reason_detected": "Guest visit"
+    },
+    {
+      "excess_pct": 48.718,
+      "excess_kwh": 0.19,
+      "customer_id": "CUST001",
+      "reason_detected": "Heater malfunction"
+    },
+    {
+      "excess_pct": 73.684,
+      "excess_kwh": 0.28,
+      "customer_id": "CUST006",
+      "reason_detected": "Overnight appliance"
+    },
+    {
+      "excess_pct": 50.0,
+      "excess_kwh": 0.15,
+      "customer_id": "CUST003",
+      "reason_detected": "Schedule change"
+    },
+    {
+      "excess_pct": 57.407,
+      "excess_kwh": 0.31,
+      "customer_id": "CUST020",
+      "reason_detected": "Schedule change"
+    },
+    {
+      "excess_pct": 70.732,
+      "excess_kwh": 0.29,
+      "customer_id": "CUST020",
+      "reason_detected": "Guest visit"
+    },
+    {
+      "excess_pct": 65.0,
+      "excess_kwh": 0.26,
+      "customer_id": "CUST006",
+      "reason_detected": "Overnight appliance"
+    },
+    {
+      "excess_pct": 52.778,
+      "excess_kwh": 0.19,
+      "customer_id": "CUST019",
+      "reason_detected": "Guest visit"
+    },
+    {
+      "excess_pct": 45.098,
+      "excess_kwh": 0.23,
+      "customer_id": "CUST006",
+      "reason_detected": "Overnight appliance"
+    },
+    {
+      "excess_pct": 50.0,
+      "excess_kwh": 0.17,
+      "customer_id": "CUST020",
+      "reason_detected": "Heater malfunction"
+    },
+    {
+      "excess_pct": 45.833,
+      "excess_kwh": 0.22,
+      "customer_id": "CUST020",
+      "reason_detected": "Schedule change"
+    },
+    {
+      "excess_pct": 46.97,
+      "excess_kwh": 0.31,
+      "customer_id": "CUST005",
+      "reason_detected": "Overnight appliance"
+    },
+    {
+      "excess_pct": 47.5,
+      "excess_kwh": 0.19,
+      "customer_id": "CUST013",
+      "reason_detected": "Heater malfunction"
+    },
+    {
+      "excess_pct": 57.576,
+      "excess_kwh": 0.19,
+      "customer_id": "CUST015",
+      "reason_detected": "Schedule change"
+    },
+    {
+      "excess_pct": 54.286,
+      "excess_kwh": 0.19,
+      "customer_id": "CUST010",
+      "reason_detected": "Guest visit"
+    },
+    {
+      "excess_pct": 93.548,
+      "excess_kwh": 0.29,
+      "customer_id": "CUST019",
+      "reason_detected": "Overnight appliance"
+    },
+    {
+      "excess_pct": 46.154,
+      "excess_kwh": 0.18,
+      "customer_id": "CUST011",
+      "reason_detected": "Schedule change"
+    },
+    {
+      "excess_pct": 47.222,
+      "excess_kwh": 0.17,
+      "customer_id": "CUST016",
+      "reason_detected": "Overnight appliance"
+    },
+    {
+      "excess_pct": 42.424,
+      "excess_kwh": 0.14,
+      "customer_id": "CUST008",
+      "reason_detected": "Overnight appliance"
+    },
+    {
+      "excess_pct": 42.222,
+      "excess_kwh": 0.19,
+      "customer_id": "CUST015",
+      "reason_detected": "Overnight appliance"
+    },
+    {
+      "excess_pct": 43.333,
+      "excess_kwh": 0.26,
+      "customer_id": "CUST009",
+      "reason_detected": "Heater malfunction"
+    },
+    {
+      "excess_pct": 54.545,
+      "excess_kwh": 0.24,
+      "customer_id": "CUST006",
+      "reason_detected": "Schedule change"
+    },
+    {
+      "excess_pct": 40.0,
+      "excess_kwh": 0.14,
+      "customer_id": "CUST009",
+      "reason_detected": "Schedule change"
+    },
+    {
+      "excess_pct": 60.0,
+      "excess_kwh": 0.21,
+      "customer_id": "CUST011",
+      "reason_detected": "Heater malfunction"
+    },
+    {
+      "excess_pct": 67.5,
+      "excess_kwh": 0.27,
+      "customer_id": "CUST003",
+      "reason_detected": "Guest visit"
+    },
+    {
+      "excess_pct": 46.154,
+      "excess_kwh": 0.24,
+      "customer_id": "CUST002",
+      "reason_detected": "Guest visit"
+    },
+    {
+      "excess_pct": 51.613,
+      "excess_kwh": 0.16,
+      "customer_id": "CUST004",
+      "reason_detected": "Guest visit"
+    },
+    {
+      "excess_pct": 44.737,
+      "excess_kwh": 0.17,
+      "customer_id": "CUST007",
+      "reason_detected": "Overnight appliance"
+    },
+    {
+      "excess_pct": 46.809,
+      "excess_kwh": 0.22,
+      "customer_id": "CUST014",
+      "reason_detected": "Overnight appliance"
+    },
+    {
+      "excess_pct": 43.243,
+      "excess_kwh": 0.16,
+      "customer_id": "CUST020",
+      "reason_detected": "Schedule change"
+    },
+    {
+      "excess_pct": 54.545,
+      "excess_kwh": 0.18,
+      "customer_id": "CUST002",
+      "reason_detected": "Overnight appliance"
+    },
+    {
+      "excess_pct": 42.857,
+      "excess_kwh": 0.15,
+      "customer_id": "CUST006",
+      "reason_detected": "Overnight appliance"
+    },
+    {
+      "excess_pct": 54.839,
+      "excess_kwh": 0.17,
+      "customer_id": "CUST008",
+      "reason_detected": "Heater malfunction"
+    },
+    {
+      "excess_pct": 57.895,
+      "excess_kwh": 0.22,
+      "customer_id": "CUST012",
+      "reason_detected": "Overnight appliance"
+    },
+    {
+      "excess_pct": 47.222,
+      "excess_kwh": 0.17,
+      "customer_id": "CUST020",
+      "reason_detected": "Heater malfunction"
+    },
+    {
+      "excess_pct": 78.788,
+      "excess_kwh": 0.26,
+      "customer_id": "CUST012",
+      "reason_detected": "Schedule change"
+    },
+    {
+      "excess_pct": 44.156,
+      "excess_kwh": 0.34,
+      "customer_id": "CUST014",
+      "reason_detected": "Heater malfunction"
+    },
+    {
+      "excess_pct": 48.718,
+      "excess_kwh": 0.19,
+      "customer_id": "CUST010",
+      "reason_detected": "Heater malfunction"
+    },
+    {
+      "excess_pct": 42.105,
+      "excess_kwh": 0.16,
+      "customer_id": "CUST009",
+      "reason_detected": "Guest visit"
+    },
+    {
+      "excess_pct": 40.0,
+      "excess_kwh": 0.14,
+      "customer_id": "CUST020",
+      "reason_detected": "Heater malfunction"
+    },
+    {
+      "excess_pct": 60.606,
+      "excess_kwh": 0.2,
+      "customer_id": "CUST020",
+      "reason_detected": "Overnight appliance"
+    },
+    {
+      "excess_pct": 58.14,
+      "excess_kwh": 0.25,
+      "customer_id": "CUST018",
+      "reason_detected": "Heater malfunction"
+    },
+    {
+      "excess_pct": 53.846,
+      "excess_kwh": 0.21,
+      "customer_id": "CUST006",
+      "reason_detected": "Overnight appliance"
+    },
+    {
+      "excess_pct": 46.154,
+      "excess_kwh": 0.18,
+      "customer_id": "CUST011",
+      "reason_detected": "Heater malfunction"
+    },
+    {
+      "excess_pct": 48.649,
+      "excess_kwh": 0.18,
+      "customer_id": "CUST004",
+      "reason_detected": "Heater malfunction"
+    },
+    {
+      "excess_pct": 46.0,
+      "excess_kwh": 0.23,
+      "customer_id": "CUST017",
+      "reason_detected": "Schedule change"
+    },
+    {
+      "excess_pct": 41.667,
+      "excess_kwh": 0.15,
+      "customer_id": "CUST005",
+      "reason_detected": "Heater malfunction"
+    },
+    {
+      "excess_pct": 70.0,
+      "excess_kwh": 0.21,
+      "customer_id": "CUST018",
+      "reason_detected": "Overnight appliance"
+    },
+    {
+      "excess_pct": 43.75,
+      "excess_kwh": 0.14,
+      "customer_id": "CUST004",
+      "reason_detected": "Overnight appliance"
+    },
+    {
+      "excess_pct": 42.373,
+      "excess_kwh": 0.25,
+      "customer_id": "CUST014",
+      "reason_detected": "Heater malfunction"
+    },
+    {
+      "excess_pct": 51.429,
+      "excess_kwh": 0.18,
+      "customer_id": "CUST004",
+      "reason_detected": "Guest visit"
+    },
+    {
+      "excess_pct": 57.778,
+      "excess_kwh": 0.26,
+      "customer_id": "CUST006",
+      "reason_detected": "Heater malfunction"
+    },
+    {
+      "excess_pct": 44.118,
+      "excess_kwh": 0.15,
+      "customer_id": "CUST018",
+      "reason_detected": "Schedule change"
+    },
+    {
+      "excess_pct": 47.619,
+      "excess_kwh": 0.2,
+      "customer_id": "CUST008",
+      "reason_detected": "Heater malfunction"
+    },
+    {
+      "excess_pct": 46.032,
+      "excess_kwh": 0.29,
+      "customer_id": "CUST010",
+      "reason_detected": "Schedule change"
+    },
+    {
+      "excess_pct": 52.632,
+      "excess_kwh": 0.2,
+      "customer_id": "CUST008",
+      "reason_detected": "Heater malfunction"
+    },
+    {
+      "excess_pct": 57.143,
+      "excess_kwh": 0.24,
+      "customer_id": "CUST006",
+      "reason_detected": "Schedule change"
+    },
+    {
+      "excess_pct": 41.176,
+      "excess_kwh": 0.21,
+      "customer_id": "CUST016",
+      "reason_detected": "Overnight appliance"
+    },
+    {
+      "excess_pct": 55.556,
+      "excess_kwh": 0.2,
+      "customer_id": "CUST012",
+      "reason_detected": "Heater malfunction"
+    },
+    {
+      "excess_pct": 55.102,
+      "excess_kwh": 0.27,
+      "customer_id": "CUST014",
+      "reason_detected": "Guest visit"
+    },
+    {
+      "excess_pct": 48.571,
+      "excess_kwh": 0.17,
+      "customer_id": "CUST017",
+      "reason_detected": "Schedule change"
+    },
+    {
+      "excess_pct": 40.678,
+      "excess_kwh": 0.24,
+      "customer_id": "CUST012",
+      "reason_detected": "Heater malfunction"
+    },
+    {
+      "excess_pct": 40.0,
+      "excess_kwh": 0.14,
+      "customer_id": "CUST013",
+      "reason_detected": "Schedule change"
+    },
+    {
+      "excess_pct": 53.846,
+      "excess_kwh": 0.21,
+      "customer_id": "CUST005",
+      "reason_detected": "Schedule change"
+    },
+    {
+      "excess_pct": 45.946,
+      "excess_kwh": 0.17,
+      "customer_id": "CUST010",
+      "reason_detected": "Overnight appliance"
+    },
+    {
+      "excess_pct": 54.839,
+      "excess_kwh": 0.17,
+      "customer_id": "CUST004",
+      "reason_detected": "Heater malfunction"
+    },
+    {
+      "excess_pct": 44.0,
+      "excess_kwh": 0.22,
+      "customer_id": "CUST020",
+      "reason_detected": "Overnight appliance"
+    }
+  ],
+  "funnel": [
+    {
+      "stage": "Spikes detected",
+      "value": 114
+    },
+    {
+      "stage": "Alerts sent",
+      "value": 111
+    },
+    {
+      "stage": "Cases resolved",
+      "value": 77
+    }
+  ]
+}

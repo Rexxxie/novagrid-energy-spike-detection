@@ -1,0 +1,782 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NovaGrid — Abnormal Energy Spike Monitor</title>
+<style>
+/* ---------- tokens ---------------------------------------------------- */
+.viz-root{
+  color-scheme: light;
+  --plane:#f9f9f7; --surface:#fcfcfb;
+  --ink:#0b0b0b; --ink-2:#52514e; --muted:#898781;
+  --grid:#e1e0d9; --axis:#c3c2b7; --border:rgba(11,11,11,.10);
+  --series-1:#2a78d6; --series-2:#eb6834;
+  --ramp-1:#86b6ef; --ramp-2:#3987e5; --ramp-3:#1c5cab;
+  --good:#0ca30c; --warning:#fab219; --critical:#d03b3b;
+  --wash:rgba(11,11,11,.04);
+}
+@media (prefers-color-scheme: dark){
+  :root:where(:not([data-theme="light"])) .viz-root{
+    color-scheme: dark;
+    --plane:#0d0d0d; --surface:#1a1a19;
+    --ink:#ffffff; --ink-2:#c3c2b7; --muted:#898781;
+    --grid:#2c2c2a; --axis:#383835; --border:rgba(255,255,255,.10);
+    --series-1:#3987e5; --series-2:#d95926;
+    --ramp-1:#3987e5; --ramp-2:#256abf; --ramp-3:#184f95;
+    --wash:rgba(255,255,255,.05);
+  }
+}
+:root[data-theme="dark"] .viz-root{
+  color-scheme: dark;
+  --plane:#0d0d0d; --surface:#1a1a19;
+  --ink:#ffffff; --ink-2:#c3c2b7; --muted:#898781;
+  --grid:#2c2c2a; --axis:#383835; --border:rgba(255,255,255,.10);
+  --series-1:#3987e5; --series-2:#d95926;
+  --ramp-1:#3987e5; --ramp-2:#256abf; --ramp-3:#184f95;
+  --wash:rgba(255,255,255,.05);
+}
+
+*{box-sizing:border-box}
+body{margin:0}
+.viz-root{
+  background:var(--plane); color:var(--ink); min-height:100vh;
+  font:15px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif;
+  padding:32px 24px 72px;
+}
+.wrap{max-width:1240px;margin:0 auto}
+
+/* ---------- header ---------------------------------------------------- */
+header{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap;margin-bottom:8px}
+h1{font-size:26px;line-height:1.2;margin:0 0 6px;font-weight:600;letter-spacing:-.01em}
+.sub{color:var(--ink-2);font-size:14px;max-width:68ch;margin:0}
+.theme-btn{
+  background:var(--surface);border:1px solid var(--border);color:var(--ink-2);
+  border-radius:8px;padding:8px 12px;font:inherit;font-size:13px;cursor:pointer;white-space:nowrap;
+}
+.theme-btn:hover{background:var(--wash)}
+
+/* ---------- filters --------------------------------------------------- */
+.filters{
+  display:flex;gap:10px;flex-wrap:wrap;align-items:center;
+  margin:22px 0 20px;padding:12px 14px;background:var(--surface);
+  border:1px solid var(--border);border-radius:12px;
+}
+.filters .lbl{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-right:2px}
+select{
+  font:inherit;font-size:13.5px;color:var(--ink);background:var(--surface);
+  border:1px solid var(--border);border-radius:8px;padding:7px 10px;cursor:pointer;
+}
+.scope{margin-left:auto;font-size:13px;color:var(--ink-2)}
+.scope b{color:var(--ink);font-weight:600}
+
+/* ---------- stat tiles ------------------------------------------------ */
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(178px,1fr));gap:12px;margin-bottom:22px}
+.tile{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 16px 14px}
+.tile .k{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+.tile .v{font-size:30px;font-weight:600;line-height:1;letter-spacing:-.02em}
+.tile .n{font-size:12.5px;color:var(--ink-2);margin-top:8px}
+.tile .v small{font-size:16px;font-weight:500;color:var(--ink-2);margin-left:2px}
+.flag{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;font-weight:500}
+.flag.bad{color:var(--critical)} .flag.ok{color:var(--good)}
+.flag svg{flex:none}
+
+/* ---------- cards ----------------------------------------------------- */
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px 18px 12px;min-width:0}
+.card.full{grid-column:1/-1}
+.card h2{font-size:16.5px;font-weight:600;margin:0 0 4px;letter-spacing:-.005em}
+.card .cap{font-size:13px;color:var(--ink-2);margin:0 0 14px;max-width:82ch}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.tbl-btn{
+  background:none;border:1px solid var(--border);color:var(--muted);border-radius:7px;
+  padding:4px 9px;font:inherit;font-size:11.5px;cursor:pointer;flex:none;
+}
+.tbl-btn:hover{background:var(--wash);color:var(--ink-2)}
+.tbl-btn[aria-pressed="true"]{background:var(--wash);color:var(--ink)}
+.plot{width:100%;overflow-x:auto}
+.plot svg{display:block;max-width:100%;height:auto}
+
+/* ---------- legend ---------------------------------------------------- */
+.legend{display:flex;gap:16px;flex-wrap:wrap;margin:10px 0 4px;font-size:12.5px;color:var(--ink-2)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.swatch{width:10px;height:10px;border-radius:3px;flex:none}
+.swatch.line{width:14px;height:2px;border-radius:1px}
+
+/* ---------- tables ---------------------------------------------------- */
+.tblwrap{overflow-x:auto;margin-top:4px}
+table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums}
+th,td{text-align:right;padding:7px 10px;border-bottom:1px solid var(--grid);white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+th{color:var(--muted);font-weight:500;font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;
+   position:sticky;top:0;background:var(--surface)}
+tbody tr:hover{background:var(--wash)}
+td.tag{color:var(--ink-2)}
+.pill{display:inline-block;padding:2px 8px;border-radius:99px;font-size:11.5px;font-weight:500}
+.pill.open{background:color-mix(in srgb,var(--critical) 14%,transparent);color:var(--critical)}
+.pill.done{background:color-mix(in srgb,var(--good) 14%,transparent);color:var(--good)}
+.hidden{display:none}
+
+/* ---------- tooltip --------------------------------------------------- */
+#tip{
+  position:fixed;pointer-events:none;opacity:0;transition:opacity .09s;z-index:50;
+  background:var(--surface);border:1px solid var(--border);border-radius:9px;
+  padding:9px 11px;font-size:12.5px;line-height:1.5;color:var(--ink);
+  box-shadow:0 6px 22px rgba(0,0,0,.13);max-width:280px;
+}
+#tip .t{font-weight:600;margin-bottom:3px}
+#tip .r{color:var(--ink-2);display:flex;justify-content:space-between;gap:14px}
+#tip .r b{color:var(--ink);font-weight:600}
+
+/* ---------- notes ----------------------------------------------------- */
+.notes{margin-top:26px;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px 20px}
+.notes h2{font-size:15px;margin:0 0 10px;font-weight:600}
+.notes ul{margin:0;padding-left:18px;color:var(--ink-2);font-size:13.5px}
+.notes li{margin-bottom:6px}
+.notes code{font-size:12.5px;background:var(--wash);padding:1px 5px;border-radius:4px}
+footer{margin-top:22px;color:var(--muted);font-size:12.5px}
+
+@media (max-width:880px){
+  .grid{grid-template-columns:minmax(0,1fr)}
+  .viz-root{padding:20px 14px 56px}
+}
+</style>
+</head>
+<body>
+<div class="viz-root">
+<div class="wrap">
+
+  <header>
+    <div>
+      <h1>NovaGrid — abnormal energy spike monitor</h1>
+      <p class="sub" id="hdr-sub"></p>
+    </div>
+    <button class="theme-btn" id="theme">Switch theme</button>
+  </header>
+
+  <div class="filters">
+    <span class="lbl">Filter</span>
+    <select id="f-region"></select>
+    <select id="f-housing"></select>
+    <select id="f-status">
+      <option value="all">All cases</option>
+      <option value="open">Unresolved only</option>
+      <option value="fault">Appliance faults only</option>
+    </select>
+    <span class="scope" id="scope"></span>
+  </div>
+
+  <div class="tiles" id="tiles"></div>
+
+  <div class="grid" id="grid"></div>
+
+  <div class="notes">
+    <h2>How to read this</h2>
+    <ul>
+      <li><b>Spike</b> = a reading where <code>energy_usage_kWh &gt; 1.4 × baseline_kWh</code> — NovaGrid's own documented rule, re-derived here from the raw readings rather than trusted from the <code>spike_detected</code> column.</li>
+      <li><b>Blind readings</b> are readings where 1.4 × baseline is higher than the largest reading any meter in the fleet has ever produced. The rule cannot fire on them at any consumption level.</li>
+      <li><b>Wasted energy</b> is the reading minus its own baseline, priced at the Ofgem Jan–Mar 2024 electricity unit rate of 28.62 p/kWh. It is what the household paid for above its own normal pattern — not a full bill impact.</li>
+      <li>Every chart has a <b>Table</b> toggle carrying the same numbers, and all charts respond to the one filter row above.</li>
+    </ul>
+  </div>
+
+  <footer id="foot"></footer>
+</div>
+</div>
+<div id="tip" role="status" aria-live="polite"></div>
+
+<script>
+const PAYLOAD = /*__DATA__*/null;
+const D = PAYLOAD.readings, C = PAYLOAD.constants;
+const V = D.vocab;
+const FAULT = new Set(PAYLOAD.fault_reasons.map(r => V.reason.indexOf(r)));
+
+/* ---------- tiny helpers ------------------------------------------------ */
+const NS = "http://www.w3.org/2000/svg";
+const el = (t, a = {}, kids = []) => {
+  const n = document.createElementNS(NS, t);
+  for (const k in a) if (a[k] !== null && a[k] !== undefined) n.setAttribute(k, a[k]);
+  for (const c of [].concat(kids)) n.appendChild(typeof c === "string" ? document.createTextNode(c) : c);
+  return n;
+};
+const css = v => getComputedStyle(document.querySelector(".viz-root")).getPropertyValue(v).trim();
+const fmt = (n, d = 0) => n.toLocaleString("en-GB", { minimumFractionDigits: d, maximumFractionDigits: d });
+const pct = (a, b) => b ? (a / b * 100) : 0;
+
+/** Rounded-end bar path. Radius is clamped so a short bar never inverts. */
+function barPath(x, y, w, h, r, end) {
+  r = Math.max(0, Math.min(r, w / 2, h / 2));
+  if (end === "top")
+    return `M${x},${y + h} L${x},${y + r} Q${x},${y} ${x + r},${y} L${x + w - r},${y} Q${x + w},${y} ${x + w},${y + r} L${x + w},${y + h} Z`;
+  return `M${x},${y} L${x + w - r},${y} Q${x + w},${y} ${x + w},${y + r} L${x + w},${y + h - r} Q${x + w},${y + h} ${x + w - r},${y + h} L${x},${y + h} Z`;
+}
+
+/* ---------- tooltip ----------------------------------------------------- */
+const tip = document.getElementById("tip");
+function showTip(ev, title, rows) {
+  tip.innerHTML = `<div class="t">${title}</div>` +
+    rows.map(([k, v]) => `<div class="r"><span>${k}</span><b>${v}</b></div>`).join("");
+  tip.style.opacity = 1;
+  moveTip(ev);
+}
+function moveTip(ev) {
+  const pad = 14, r = tip.getBoundingClientRect();
+  let x = ev.clientX + pad, y = ev.clientY + pad;
+  if (x + r.width > innerWidth - 8) x = ev.clientX - r.width - pad;
+  if (y + r.height > innerHeight - 8) y = ev.clientY - r.height - pad;
+  tip.style.left = x + "px"; tip.style.top = y + "px";
+}
+const hideTip = () => { tip.style.opacity = 0; };
+/** Hover behaviour on a mark, with a hit area at least 24px wherever we can. */
+function hoverable(node, title, rows) {
+  node.style.cursor = "default";
+  node.addEventListener("mouseenter", e => showTip(e, title, rows));
+  node.addEventListener("mousemove", moveTip);
+  node.addEventListener("mouseleave", hideTip);
+  node.setAttribute("tabindex", "0");
+  node.addEventListener("focus", e => {
+    const b = node.getBoundingClientRect();
+    showTip({ clientX: b.left + b.width / 2, clientY: b.top }, title, rows);
+  });
+  node.addEventListener("blur", hideTip);
+  return node;
+}
+
+/* ---------- state ------------------------------------------------------- */
+const state = { region: -1, housing: -1, status: "all" };
+
+/** Row indices passing the filter row. Status filters narrow which SPIKES are
+ *  in scope; the consumption cloud always reflects region/housing only. */
+function baseRows() {
+  const out = [];
+  for (let i = 0; i < D.n; i++) {
+    if (state.region >= 0 && D.region[i] !== state.region) continue;
+    if (state.housing >= 0 && D.housing[i] !== state.housing) continue;
+    out.push(i);
+  }
+  return out;
+}
+function spikeRows(rows) {
+  return rows.filter(i => {
+    if (!D.spike[i]) return false;
+    if (state.status === "open") return D.resolved[i] !== 1;
+    if (state.status === "fault") return FAULT.has(D.reason[i]);
+    return true;
+  });
+}
+
+/* ---------- aggregation ------------------------------------------------- */
+function summarise(rows, sp) {
+  const blind = rows.filter(i => C.multiplier * D.base[i] > C.ceiling).length;
+  const alerts = sp.filter(i => D.alert[i]).length;
+  const resolved = sp.filter(i => D.resolved[i] === 1).length;
+  const lat = sp.map(i => D.latency[i]).filter(v => v !== null).sort((a, b) => a - b);
+  const excess = sp.reduce((s, i) => s + Math.max(0, D.usage[i] - D.base[i]), 0);
+  const households = new Set(rows.map(i => D.customer[i])).size;
+  const days = new Set(rows.map(i => D.day[i])).size || 1;
+  const perHhYear = households ? excess / households / (days / 7) * 52 : 0;
+  return {
+    readings: rows.length, spikes: sp.length, households,
+    blindPct: pct(blind, rows.length),
+    alerts, alertPct: pct(alerts, sp.length),
+    resolved, resolvedPct: pct(resolved, sp.length),
+    medLat: lat.length ? lat[Math.floor(lat.length / 2)] : null,
+    excess, annualPerMeter: perHhYear * C.unit_rate,
+  };
+}
+
+/* ---------- stat tiles -------------------------------------------------- */
+const ICON_BAD = '<svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 1.2 11.2 10.5H.8z" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/><path d="M6 4.6v2.6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><circle cx="6" cy="8.8" r=".75" fill="currentColor"/></svg>';
+const ICON_OK = '<svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6.4 4.8 9.2 10 3.2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+function renderTiles(s) {
+  const t = [
+    { k: "Spikes detected", v: fmt(s.spikes), n: `${fmt(s.readings)} readings in scope · ${s.spikes ? (s.spikes / s.readings * 100).toFixed(2) : "0.00"}% flagged` },
+    { k: "Detection blind spot", v: s.blindPct.toFixed(1), u: "%", n: "readings the 1.4× rule cannot fire on", flag: ["bad", "structural gap"] },
+    { k: "Alert coverage", v: s.alertPct.toFixed(1), u: "%", n: `${s.spikes - s.alerts} spike(s) never alerted`, flag: s.spikes - s.alerts ? ["bad", "leakage"] : ["ok", "complete"] },
+    { k: "Median alert latency", v: s.medLat === null ? "—" : s.medLat.toFixed(1), u: s.medLat === null ? "" : " min", n: "meter reading → customer alert", flag: ["ok", "near-real-time"] },
+    { k: "Cases resolved", v: s.resolvedPct.toFixed(0), u: "%", n: `${s.spikes - s.resolved} still open`, flag: s.resolvedPct < 80 ? ["bad", "below target"] : ["ok", "on target"] },
+    { k: "Waste per meter / yr", v: "£" + s.annualPerMeter.toFixed(2), n: `≈ £${fmt(s.annualPerMeter * C.fleet / 1e6, 1)}m across ${fmt(C.fleet / 1e6, 0)}m meters` },
+  ];
+  document.getElementById("tiles").innerHTML = t.map(x => `
+    <div class="tile">
+      <div class="k">${x.k}</div>
+      <div class="v">${x.v}${x.u ? `<small>${x.u}</small>` : ""}</div>
+      <div class="n">${x.flag ? `<span class="flag ${x.flag[0]}">${x.flag[0] === "bad" ? ICON_BAD : ICON_OK}${x.flag[1]}</span> · ` : ""}${x.n}</div>
+    </div>`).join("");
+}
+
+/* ---------- card scaffold ----------------------------------------------- */
+function card(id, cls, h2, cap) {
+  const d = document.createElement("div");
+  d.className = "card " + cls;
+  d.innerHTML = `<div class="card-head"><div><h2>${h2}</h2><p class="cap">${cap}</p></div>
+    <button class="tbl-btn" aria-pressed="false" data-for="${id}">Table</button></div>
+    <div class="plot" id="${id}"></div><div class="tblwrap hidden" id="${id}-t"></div>`;
+  return d;
+}
+function tableFor(id, cols, rows) {
+  document.getElementById(id + "-t").innerHTML =
+    `<table><thead><tr>${cols.map(c => `<th>${c}</th>`).join("")}</tr></thead>
+     <tbody>${rows.map(r => `<tr>${r.map(c => `<td>${c}</td>`).join("")}</tr>`).join("")}</tbody></table>`;
+}
+
+/* ---------- axes -------------------------------------------------------- */
+function yAxis(g, y, ticks, W, L, fmtT = v => v) {
+  ticks.forEach(t => {
+    g.appendChild(el("line", { x1: L, x2: W, y1: y(t), y2: y(t), stroke: css("--grid"), "stroke-width": 1 }));
+    g.appendChild(el("text", { x: L - 9, y: y(t) + 4, "text-anchor": "end", fill: css("--muted"), "font-size": 11 }, String(fmtT(t))));
+  });
+}
+function niceTicks(max, n = 5) {
+  const step = Math.pow(10, Math.floor(Math.log10(max / n)));
+  const err = max / n / step;
+  const mult = err >= 7.5 ? 10 : err >= 3 ? 5 : err >= 1.5 ? 2 : 1;
+  const s = step * mult, out = [];
+  for (let v = 0; v <= max + 1e-9; v += s) out.push(+v.toFixed(6));
+  return out;
+}
+
+/* ---------- 1. coverage scatter ----------------------------------------- */
+function chartCoverage(rows, sp) {
+  const W = 1180, H = 470, L = 58, R = 20, T = 16, B = 46;
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, width: W, height: H, role: "img" });
+  const xs = rows.map(i => D.base[i]), ys = rows.map(i => D.usage[i]);
+  // A scatter encodes position, not length, so the frame hugs the data instead
+  // of anchoring at zero — an empty lower-left quadrant would hide the pattern.
+  const xMin = Math.min(...xs) * .92, xMax = Math.max(...xs) * 1.06;
+  const yMin = Math.min(...ys) * .88, yMax = Math.max(Math.max(...ys), C.ceiling) * 1.10;
+  const x = v => L + (v - xMin) / (xMax - xMin) * (W - L - R);
+  const y = v => H - B - (v - yMin) / (yMax - yMin) * (H - B - T);
+
+  const cut = C.ceiling / C.multiplier;
+  if (cut < xMax)
+    svg.appendChild(el("rect", { x: Math.max(L, x(cut)), y: T, width: W - R - Math.max(L, x(cut)), height: H - B - T, fill: css("--critical"), opacity: .055 }));
+
+  yAxis(svg, y, niceTicks(yMax, 5).filter(t => t >= yMin), W - R, L, v => v.toFixed(1));
+  niceTicks(xMax, 6).filter(t => t >= xMin).forEach(t => {
+    svg.appendChild(el("line", { x1: x(t), x2: x(t), y1: T, y2: H - B, stroke: css("--grid"), "stroke-width": 1 }));
+    svg.appendChild(el("text", { x: x(t), y: H - B + 20, "text-anchor": "middle", fill: css("--muted"), "font-size": 11 }, t.toFixed(1)));
+  });
+
+  // recessive cloud first, spikes on top
+  const cloud = el("g", { fill: css("--muted"), opacity: .24 });
+  const step = Math.max(1, Math.floor(rows.length / 2200));
+  for (let k = 0; k < rows.length; k += step) {
+    const i = rows[k];
+    if (D.spike[i]) continue;
+    cloud.appendChild(el("circle", { cx: x(D.base[i]).toFixed(1), cy: y(D.usage[i]).toFixed(1), r: 2 }));
+  }
+  svg.appendChild(cloud);
+
+  sp.forEach(i => {
+    const c = el("circle", {
+      cx: x(D.base[i]).toFixed(1), cy: y(D.usage[i]).toFixed(1), r: 4,
+      fill: css("--critical"), stroke: css("--surface"), "stroke-width": 1.2,
+    });
+    hoverable(c, V.customer[D.customer[i]] + " · " + D.record[i], [
+      ["Reading", D.usage[i].toFixed(2) + " kWh"],
+      ["Baseline", D.base[i].toFixed(2) + " kWh"],
+      ["Above baseline", "+" + ((D.usage[i] / D.base[i] - 1) * 100).toFixed(0) + "%"],
+      ["Wasted", (D.usage[i] - D.base[i]).toFixed(2) + " kWh"],
+      ["Reason", D.reason[i] >= 0 ? V.reason[D.reason[i]] : "not recorded"],
+    ]);
+    svg.appendChild(c);
+  });
+
+  // the rule, and the physical ceiling that defeats it
+  const rx0 = xMin, rx1 = Math.min(xMax, yMax / C.multiplier);
+  svg.appendChild(el("line", {
+    x1: x(rx0), y1: y(rx0 * C.multiplier), x2: x(rx1), y2: y(rx1 * C.multiplier),
+    stroke: css("--ink-2"), "stroke-width": 1.8,
+  }));
+  svg.appendChild(el("line", { x1: L, x2: W - R, y1: y(C.ceiling), y2: y(C.ceiling), stroke: css("--axis"), "stroke-width": 1.2 }));
+  svg.appendChild(el("text", { x: L + 6, y: y(C.ceiling) - 8, fill: css("--muted"), "font-size": 11.5 },
+    `highest reading in the fleet — ${C.ceiling} kWh`));
+  if (cut < xMax) {
+    const blind = rows.filter(i => C.multiplier * D.base[i] > C.ceiling).length;
+    svg.appendChild(el("text", { x: x(cut) + 10, y: H - B - 46, fill: css("--critical"), "font-size": 12 },
+      "the rule cannot fire in this band"));
+    svg.appendChild(el("text", { x: x(cut) + 10, y: H - B - 26, fill: css("--critical"), "font-size": 12, "font-weight": 600 },
+      `${pct(blind, rows.length).toFixed(1)}% of readings in scope`));
+  }
+  svg.appendChild(el("text", { x: (W + L) / 2, y: H - 8, "text-anchor": "middle", fill: css("--ink-2"), "font-size": 12 },
+    "Household baseline for this time slot (kWh)"));
+  svg.appendChild(el("text", { x: 16, y: (H - B + T) / 2, fill: css("--ink-2"), "font-size": 12, transform: `rotate(-90 16 ${(H - B + T) / 2})`, "text-anchor": "middle" },
+    "Actual reading (kWh)"));
+
+  const host = document.getElementById("c-cov");
+  host.innerHTML = "";
+  host.appendChild(svg);
+  host.insertAdjacentHTML("afterend", "");
+  document.getElementById("cov-legend").innerHTML =
+    `<span><i class="swatch" style="background:${css("--muted")};opacity:.5"></i>Normal reading</span>
+     <span><i class="swatch" style="background:${css("--critical")}"></i>Flagged spike</span>
+     <span><i class="swatch line" style="background:${css("--ink-2")}"></i>1.4 × baseline rule</span>
+     <span><i class="swatch line" style="background:${css("--axis")}"></i>Fleet maximum reading</span>`;
+
+  const q = [.25, .5, .75, .95, 1].map(p => {
+    const v = sp.map(i => D.base[i]).sort((a, b) => a - b);
+    return v.length ? v[Math.min(v.length - 1, Math.floor(p * v.length))] : 0;
+  });
+  tableFor("c-cov",
+    ["Measure", "Value"],
+    [["Readings in scope", fmt(rows.length)],
+     ["Flagged spikes", fmt(sp.length)],
+     ["Readings the rule cannot fire on", fmt(rows.filter(i => C.multiplier * D.base[i] > C.ceiling).length)],
+     ["Highest baseline that ever produced a spike", (sp.length ? Math.max(...sp.map(i => D.base[i])) : 0).toFixed(2) + " kWh"],
+     ["Median baseline — all readings", median(rows.map(i => D.base[i])).toFixed(2) + " kWh"],
+     ["Median baseline — spikes only", (sp.length ? median(sp.map(i => D.base[i])) : 0).toFixed(2) + " kWh"],
+     ["Spike baseline 75th percentile", q[2].toFixed(2) + " kWh"]]);
+}
+const median = a => { const s = [...a].sort((x, y) => x - y); return s.length ? s[Math.floor(s.length / 2)] : 0; };
+
+/* ---------- 2. households ----------------------------------------------- */
+function chartHouseholds(sp) {
+  const agg = new Map();
+  sp.forEach(i => {
+    const c = D.customer[i];
+    if (!agg.has(c)) agg.set(c, { fault: 0, beh: 0, open: 0, kwh: 0 });
+    const a = agg.get(c);
+    FAULT.has(D.reason[i]) ? a.fault++ : a.beh++;
+    if (D.resolved[i] !== 1) a.open++;
+    a.kwh += Math.max(0, D.usage[i] - D.base[i]);
+  });
+  const rows = [...agg.entries()].map(([c, a]) => ({ c, ...a, total: a.fault + a.beh }))
+    .sort((x, y) => y.fault - x.fault || y.total - x.total).slice(0, 10);
+
+  const W = 566, rowH = 30, T = 8, B = 48, L = 128, R = 44;
+  const H = T + rows.length * rowH + B;
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, width: W, height: H, role: "img" });
+  const max = Math.max(1, ...rows.map(r => r.total));
+  const x = v => L + v / max * (W - L - R);
+
+  niceTicks(max, 4).forEach(t => {
+    svg.appendChild(el("line", { x1: x(t), x2: x(t), y1: T, y2: H - B, stroke: css("--grid"), "stroke-width": 1 }));
+    svg.appendChild(el("text", { x: x(t), y: H - B + 18, "text-anchor": "middle", fill: css("--muted"), "font-size": 11 }, String(t)));
+  });
+  svg.appendChild(el("text", { x: (W + L) / 2, y: H - 6, "text-anchor": "middle", fill: css("--ink-2"), "font-size": 11.5 },
+    "Spikes in the window"));
+
+  rows.forEach((r, k) => {
+    const y = T + k * rowH + 6, h = rowH - 14;
+    svg.appendChild(el("text", { x: L - 10, y: y + h / 2 + 4, "text-anchor": "end", fill: css("--ink"), "font-size": 12 },
+      V.customer[r.c]));
+    const segs = [["fault", r.fault, css("--series-1"), "Appliance fault"], ["beh", r.beh, css("--series-2"), "Behavioural"]];
+    let acc = 0;
+    segs.forEach(([, v, col, label]) => {
+      if (!v) return;
+      const x0 = x(acc) + (acc ? 2 : 0), w = x(acc + v) - x0;   // 2px surface gap
+      const p = el("path", { d: barPath(x0, y, w, h, 4, "right"), fill: col });
+      hoverable(p, V.customer_name[r.c] + " · " + V.customer[r.c],
+        [[label, v], ["Total spikes", r.total], ["Still open", r.open], ["Wasted", r.kwh.toFixed(2) + " kWh"]]);
+      svg.appendChild(p);
+      acc += v;
+    });
+    svg.appendChild(el("text", { x: x(r.total) + 8, y: y + h / 2 + 4, fill: css("--ink-2"), "font-size": 11.5 }, String(r.total)));
+  });
+
+  const host = document.getElementById("c-hh"); host.innerHTML = ""; host.appendChild(svg);
+  document.getElementById("hh-legend").innerHTML =
+    `<span><i class="swatch" style="background:${css("--series-1")}"></i>Appliance fault — recurs until fixed</span>
+     <span><i class="swatch" style="background:${css("--series-2")}"></i>Behavioural — customer's own choice</span>`;
+  tableFor("c-hh", ["Household", "Appliance", "Behavioural", "Total", "Open", "Wasted kWh"],
+    rows.map(r => [V.customer[r.c] + " — " + V.customer_name[r.c], r.fault, r.beh, r.total, r.open, r.kwh.toFixed(2)]));
+}
+
+/* ---------- 3. reasons -------------------------------------------------- */
+function chartReasons(sp) {
+  const agg = V.reason.map((name, ri) => {
+    const rows = sp.filter(i => D.reason[i] === ri);
+    return {
+      name, n: rows.length,
+      res: rows.filter(i => D.resolved[i] === 1).length,
+      fault: FAULT.has(ri),
+      kwh: rows.reduce((s, i) => s + Math.max(0, D.usage[i] - D.base[i]), 0),
+    };
+  }).sort((a, b) => b.n - a.n);
+
+  const W = 566, H = 300, L = 46, R = 12, T = 26, B = 54;
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, width: W, height: H, role: "img" });
+  const max = Math.max(1, ...agg.map(a => a.n));
+  const ticks = niceTicks(max, 4);
+  const top = Math.max(ticks[ticks.length - 1], max * 1.14);   // room for the value label
+  const y = v => H - B - v / top * (H - B - T);
+  yAxis(svg, y, ticks, W - R, L);
+
+  const bw = Math.min(46, (W - L - R) / agg.length * .42);
+  agg.forEach((a, k) => {
+    const cx = L + (W - L - R) / agg.length * (k + .5);
+    if (a.n) {
+      const p = el("path", { d: barPath(cx - bw / 2, y(a.n), bw, H - B - y(a.n), 4, "top"), fill: a.fault ? css("--series-1") : css("--series-2") });
+      hoverable(p, a.name, [["Spikes", a.n], ["Resolved", `${a.res} (${pct(a.res, a.n).toFixed(0)}%)`],
+        ["Wasted", a.kwh.toFixed(2) + " kWh"], ["Class", a.fault ? "Appliance" : "Behavioural"]]);
+      svg.appendChild(p);
+      svg.appendChild(el("text", { x: cx, y: y(a.n) - 9, "text-anchor": "middle", fill: css("--ink"), "font-size": 13, "font-weight": 600 }, String(a.n)));
+    }
+    a.name.split(" ").forEach((w, wi) => {
+      svg.appendChild(el("text", { x: cx, y: H - B + 18 + wi * 14, "text-anchor": "middle", fill: css("--ink-2"), "font-size": 11.5 }, w));
+    });
+  });
+  const host = document.getElementById("c-rsn"); host.innerHTML = ""; host.appendChild(svg);
+  document.getElementById("rsn-legend").innerHTML =
+    `<span><i class="swatch" style="background:${css("--series-1")}"></i>Appliance</span>
+     <span><i class="swatch" style="background:${css("--series-2")}"></i>Behavioural</span>`;
+  tableFor("c-rsn", ["Reason", "Class", "Spikes", "Resolved", "Resolution rate", "Wasted kWh"],
+    agg.map(a => [a.name, a.fault ? "Appliance" : "Behavioural", a.n, a.res, pct(a.res, a.n).toFixed(0) + "%", a.kwh.toFixed(2)]));
+}
+
+/* ---------- 4. funnel --------------------------------------------------- */
+function chartFunnel(sp) {
+  const stages = [
+    { s: "Spikes detected", v: sp.length },
+    { s: "Alerts sent", v: sp.filter(i => D.alert[i]).length },
+    { s: "Cases resolved", v: sp.filter(i => D.resolved[i] === 1).length },
+  ];
+  const W = 566, H = 240, L = 122, R = 108, T = 18;
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, width: W, height: H, role: "img" });
+  const max = Math.max(1, stages[0].v);
+  const x = v => L + v / max * (W - L - R);
+  const ramp = [css("--ramp-1"), css("--ramp-2"), css("--ramp-3")];
+
+  stages.forEach((st, k) => {
+    const y = T + k * 68, h = 26;
+    svg.appendChild(el("text", { x: L - 12, y: y + h / 2 + 4, "text-anchor": "end", fill: css("--ink"), "font-size": 12.5 }, st.s));
+    if (st.v) {
+      const p = el("path", { d: barPath(L, y, x(st.v) - L, h, 4, "right"), fill: ramp[k] });
+      hoverable(p, st.s, [["Count", st.v], ["Share of detected", pct(st.v, stages[0].v).toFixed(0) + "%"],
+        k ? ["Lost at this step", stages[k - 1].v - st.v] : ["—", "—"]].filter(r => r[0] !== "—"));
+      svg.appendChild(p);
+    }
+    svg.appendChild(el("text", { x: x(st.v) + 9, y: y + h / 2 + 5, fill: css("--ink"), "font-size": 15, "font-weight": 600 }, String(st.v)));
+    if (k) svg.appendChild(el("text", { x: L, y: y + h + 22, fill: css("--ink-2"), "font-size": 11.5 },
+      `${stages[k - 1].v - st.v} lost at this step · ${pct(st.v, stages[0].v).toFixed(0)}% of detected survive`));
+  });
+  const host = document.getElementById("c-fun"); host.innerHTML = ""; host.appendChild(svg);
+  tableFor("c-fun", ["Stage", "Count", "Share of detected", "Lost at this step"],
+    stages.map((st, k) => [st.s, st.v, pct(st.v, stages[0].v).toFixed(0) + "%", k ? stages[k - 1].v - st.v : "—"]));
+}
+
+/* ---------- 5. region resolution ---------------------------------------- */
+function chartRegions(sp) {
+  const agg = V.region.map((name, ri) => {
+    const rows = sp.filter(i => D.region[i] === ri);
+    const res = rows.filter(i => D.resolved[i] === 1).length;
+    return { name, n: rows.length, res, rate: pct(res, rows.length) };
+  }).filter(a => a.n).sort((a, b) => a.rate - b.rate);
+
+  const fleet = pct(sp.filter(i => D.resolved[i] === 1).length, sp.length);
+  const W = 566, H = 300, L = 44, R = 12, T = 30, B = 40;
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, width: W, height: H, role: "img" });
+  const y = v => H - B - v / 100 * (H - B - T);
+  yAxis(svg, y, [0, 25, 50, 75, 100], W - R, L, v => v + "%");
+
+  const bw = agg.length ? Math.min(58, (W - L - R) / agg.length * .5) : 0;
+  agg.forEach((a, k) => {
+    const cx = L + (W - L - R) / agg.length * (k + .5);
+    const below = a.rate < fleet;
+    const p = el("path", { d: barPath(cx - bw / 2, y(a.rate), bw, H - B - y(a.rate), 4, "top"), fill: below ? css("--critical") : css("--series-1") });
+    hoverable(p, a.name, [["Cases", a.n], ["Resolved", a.res], ["Resolution rate", a.rate.toFixed(0) + "%"],
+      ["vs fleet", (a.rate - fleet >= 0 ? "+" : "") + (a.rate - fleet).toFixed(0) + " pts"]]);
+    svg.appendChild(p);
+    svg.appendChild(el("text", { x: cx, y: y(a.rate) - 8, "text-anchor": "middle", fill: css("--ink"), "font-size": 12.5, "font-weight": 600 }, a.rate.toFixed(0) + "%"));
+    svg.appendChild(el("text", { x: cx, y: H - B + 18, "text-anchor": "middle", fill: css("--ink-2"), "font-size": 11.5 }, a.name));
+  });
+  if (agg.length) {
+    svg.appendChild(el("line", { x1: L, x2: W - R, y1: y(fleet), y2: y(fleet), stroke: css("--ink-2"), "stroke-width": 1.4 }));
+    svg.appendChild(el("text", { x: L + 4, y: y(fleet) - 7, fill: css("--ink-2"), "font-size": 11 }, `fleet ${fleet.toFixed(0)}%`));
+  }
+  const host = document.getElementById("c-reg"); host.innerHTML = ""; host.appendChild(svg);
+  tableFor("c-reg", ["Region", "Cases", "Resolved", "Resolution rate"],
+    agg.map(a => [a.name, a.n, a.res, a.rate.toFixed(0) + "%"]));
+}
+
+/* ---------- 6. latency -------------------------------------------------- */
+function chartLatency(sp) {
+  const lat = sp.map(i => D.latency[i]).filter(v => v !== null);
+  const bins = [];
+  for (let e = -10; e < 40; e += 5) bins.push({ e0: e, e1: e + 5, n: lat.filter(v => v >= e && v < e + 5).length });
+  const W = 566, H = 290, L = 40, R = 12, T = 26, B = 44;
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, width: W, height: H, role: "img" });
+  const max = Math.max(1, ...bins.map(b => b.n));
+  const ticks = niceTicks(max, 4);
+  const top = Math.max(ticks[ticks.length - 1], max * 1.10);
+  const y = v => H - B - v / top * (H - B - T);
+  const x = v => L + (v + 10) / 50 * (W - L - R);
+  yAxis(svg, y, ticks, W - R, L);
+
+  bins.forEach(b => {
+    if (!b.n) return;
+    const p = el("path", { d: barPath(x(b.e0) + 1, y(b.n), x(b.e1) - x(b.e0) - 2, H - B - y(b.n), 4, "top"), fill: b.e0 < 0 ? css("--critical") : css("--series-1") });
+    hoverable(p, `${b.e0} to ${b.e1} minutes`, [["Alerts", b.n], ["Share", pct(b.n, lat.length).toFixed(0) + "%"],
+      b.e0 < 0 ? ["Note", "alert precedes the reading"] : ["", ""]].filter(r => r[0]));
+    svg.appendChild(p);
+  });
+  [-10, 0, 10, 20, 30, 40].forEach(t => svg.appendChild(
+    el("text", { x: x(t), y: H - B + 18, "text-anchor": "middle", fill: css("--muted"), "font-size": 11 }, String(t))));
+  if (lat.length) {
+    const m = median(lat);
+    svg.appendChild(el("line", { x1: x(m), x2: x(m), y1: T, y2: H - B, stroke: css("--ink-2"), "stroke-width": 1.4 }));
+    svg.appendChild(el("text", { x: x(m) + 6, y: T + 12, fill: css("--ink-2"), "font-size": 11.5 }, `median ${m.toFixed(1)} min`));
+  }
+  svg.appendChild(el("text", { x: (W + L) / 2, y: H - 8, "text-anchor": "middle", fill: css("--ink-2"), "font-size": 11.5 },
+    "Minutes from meter reading to customer alert"));
+  const host = document.getElementById("c-lat"); host.innerHTML = ""; host.appendChild(svg);
+  tableFor("c-lat", ["Bin (minutes)", "Alerts", "Share"],
+    bins.filter(b => b.n).map(b => [`${b.e0} to ${b.e1}`, b.n, pct(b.n, lat.length).toFixed(0) + "%"]));
+}
+
+/* ---------- 7. daily ---------------------------------------------------- */
+function chartDaily(rows, sp) {
+  const days = [...new Set(rows.map(i => D.day[i]))].sort();
+  const agg = days.map(d => ({
+    d, n: sp.filter(i => D.day[i] === d).length,
+    open: sp.filter(i => D.day[i] === d && D.resolved[i] !== 1).length,
+  }));
+  const W = 566, H = 290, L = 40, R = 12, T = 26, B = 44;
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, width: W, height: H, role: "img" });
+  const max = Math.max(1, ...agg.map(a => a.n));
+  const ticks = niceTicks(max, 4);
+  const top = Math.max(ticks[ticks.length - 1], max * 1.14);   // room for the value label
+  const y = v => H - B - v / top * (H - B - T);
+  yAxis(svg, y, ticks, W - R, L);
+
+  const bw = agg.length ? Math.min(42, (W - L - R) / agg.length * .5) : 0;
+  agg.forEach((a, k) => {
+    const cx = L + (W - L - R) / agg.length * (k + .5);
+    if (a.n) {
+      const p = el("path", { d: barPath(cx - bw / 2, y(a.n), bw, H - B - y(a.n), 4, "top"), fill: css("--series-1") });
+      hoverable(p, new Date(a.d).toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "short" }),
+        [["Spikes", a.n], ["Still open", a.open]]);
+      svg.appendChild(p);
+      svg.appendChild(el("text", { x: cx, y: y(a.n) - 8, "text-anchor": "middle", fill: css("--ink"), "font-size": 12, "font-weight": 600 }, String(a.n)));
+    }
+    svg.appendChild(el("text", { x: cx, y: H - B + 18, "text-anchor": "middle", fill: css("--ink-2"), "font-size": 11 },
+      new Date(a.d).toLocaleDateString("en-GB", { weekday: "short" })));
+    svg.appendChild(el("text", { x: cx, y: H - B + 32, "text-anchor": "middle", fill: css("--muted"), "font-size": 10.5 },
+      new Date(a.d).toLocaleDateString("en-GB", { day: "numeric", month: "short" })));
+  });
+  const host = document.getElementById("c-day"); host.innerHTML = ""; host.appendChild(svg);
+  tableFor("c-day", ["Date", "Spikes", "Still open"], agg.map(a => [a.d, a.n, a.open]));
+}
+
+/* ---------- 8. worklist ------------------------------------------------- */
+function renderWorklist(sp) {
+  const rows = sp.map(i => ({
+    id: D.record[i], cust: V.customer[D.customer[i]], name: V.customer_name[D.customer[i]],
+    region: V.region[D.region[i]], ts: D.ts[i],
+    kwh: Math.max(0, D.usage[i] - D.base[i]),
+    pctv: (D.usage[i] / D.base[i] - 1) * 100,
+    reason: D.reason[i] >= 0 ? V.reason[D.reason[i]] : "not recorded",
+    fault: FAULT.has(D.reason[i]),
+    open: D.resolved[i] !== 1,
+  })).sort((a, b) => (b.open - a.open) || (b.fault - a.fault) || (b.kwh - a.kwh)).slice(0, 25);
+
+  document.getElementById("c-wl").innerHTML = `<table>
+    <thead><tr><th>Case</th><th>Household</th><th>Region</th><th>Reading</th><th>Wasted kWh</th><th>Cost</th><th>Reported</th><th>Reason</th><th>Status</th></tr></thead>
+    <tbody>${rows.map(r => `<tr>
+      <td>${r.id}</td>
+      <td class="tag">${r.cust} — ${r.name}</td>
+      <td class="tag">${r.region}</td>
+      <td class="tag">${new Date(r.ts).toLocaleString("en-GB", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })}</td>
+      <td>${r.kwh.toFixed(2)}</td>
+      <td>£${(r.kwh * C.unit_rate).toFixed(2)}</td>
+      <td>+${r.pctv.toFixed(0)}%</td>
+      <td class="tag">${r.reason}</td>
+      <td><span class="pill ${r.open ? "open" : "done"}">${r.open ? "open" : "resolved"}</span></td>
+    </tr>`).join("")}</tbody></table>`;
+}
+
+/* ---------- build ------------------------------------------------------- */
+const CARDS = [
+  ["c-cov", "full", "Where the 1.4× rule can and cannot see",
+   "Each dot is one meter reading, positioned by its own baseline. The diagonal is the spike rule; the horizontal line is the largest reading any meter in the fleet has produced. Where the diagonal passes above that line, no reading can ever trip the rule.", "cov-legend"],
+  ["c-hh", "", "Ten households carrying the caseload",
+   "Split by whether a field visit could remove the cause for good. Ranked by appliance-fault load, which is the part NovaGrid controls.", "hh-legend"],
+  ["c-rsn", "", "What the spikes actually are",
+   "Reason codes grouped into the brief's appliance / behavioural split. Hover for the resolution rate behind each bar.", "rsn-legend"],
+  ["c-fun", "", "Detection → alert → resolution",
+   "Detection and alerting hold up. The drop-off is entirely in case closure, which is an operations problem rather than an analytics one.", null],
+  ["c-reg", "", "Resolution rate by region",
+   "Same detector, same alert, same latency everywhere — the spread is in what happens after the alert lands.", null],
+  ["c-lat", "", "How fast the alert follows the reading",
+   "Red bars sit left of zero: alerts stamped earlier than the reading that triggered them, which is a clock or timezone defect in the alerting service.", null],
+  ["c-day", "", "Spikes per day",
+   "Seven days is too short to call a trend; this is here to show volume stability and the open-case tail, not seasonality.", null],
+];
+
+function buildScaffold() {
+  const g = document.getElementById("grid");
+  CARDS.forEach(([id, cls, h2, cap, legend]) => {
+    const c = card(id, cls, h2, cap);
+    if (legend) c.querySelector(".plot").insertAdjacentHTML("afterend", `<div class="legend" id="${legend}"></div>`);
+    g.appendChild(c);
+  });
+  const wl = document.createElement("div");
+  wl.className = "card full";
+  wl.innerHTML = `<div class="card-head"><div><h2>Priority worklist</h2>
+    <p class="cap">Top 25 cases in scope: open first, appliance faults next, then by energy actually wasted — not by the headline percentage.</p></div></div>
+    <div class="tblwrap" id="c-wl"></div>`;
+  g.appendChild(wl);
+
+  g.addEventListener("click", e => {
+    const b = e.target.closest(".tbl-btn"); if (!b) return;
+    const id = b.dataset.for, on = b.getAttribute("aria-pressed") === "true";
+    b.setAttribute("aria-pressed", String(!on));
+    document.getElementById(id).classList.toggle("hidden", !on);
+    document.getElementById(id + "-t").classList.toggle("hidden", on);
+  });
+}
+
+function buildFilters() {
+  const r = document.getElementById("f-region");
+  r.innerHTML = `<option value="-1">All regions</option>` + V.region.map((v, i) => `<option value="${i}">${v}</option>`).join("");
+  const h = document.getElementById("f-housing");
+  h.innerHTML = `<option value="-1">All housing types</option>` + V.housing.map((v, i) => `<option value="${i}">${v}</option>`).join("");
+  r.onchange = () => { state.region = +r.value; render(); };
+  h.onchange = () => { state.housing = +h.value; render(); };
+  document.getElementById("f-status").onchange = e => { state.status = e.target.value; render(); };
+}
+
+function render() {
+  const rows = baseRows(), sp = spikeRows(rows);
+  const s = summarise(rows, sp);
+  renderTiles(s);
+  chartCoverage(rows, sp);
+  chartHouseholds(sp);
+  chartReasons(sp);
+  chartFunnel(sp);
+  chartRegions(sp);
+  chartLatency(sp);
+  chartDaily(rows, sp);
+  renderWorklist(sp);
+  document.getElementById("scope").innerHTML =
+    `<b>${fmt(s.readings)}</b> readings · <b>${s.households}</b> households · <b>${fmt(s.spikes)}</b> spikes in scope`;
+}
+
+document.getElementById("hdr-sub").textContent =
+  `${C.window.readings.toLocaleString("en-GB")} half-hourly smart-meter readings from ${C.window.households} households across ` +
+  `${C.window.regions} regions, ${new Date(C.window.start).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })} to ` +
+  `${new Date(C.window.end).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}. ` +
+  `Every figure is recomputed from the raw readings, not read off the supplied flags.`;
+document.getElementById("foot").textContent =
+  `Source: NovaGrid smart-meter extract. ${C.cleaning.rows_dropped_duplicate} duplicate rows and ` +
+  `${C.cleaning.rows_dropped_blank} blank row removed before analysis. Cost converted at ${(C.unit_rate * 100).toFixed(2)}p/kWh ` +
+  `(Ofgem cap, Jan–Mar 2024). Fleet extrapolation assumes ${(C.fleet / 1e6).toFixed(0)}m meters.`;
+
+document.getElementById("theme").onclick = () => {
+  const cur = document.documentElement.getAttribute("data-theme");
+  const dark = cur ? cur === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+  document.documentElement.setAttribute("data-theme", dark ? "light" : "dark");
+  render();
+};
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
+  if (!document.documentElement.getAttribute("data-theme")) render();
+});
+
+buildScaffold();
+buildFilters();
+render();
+</script>
+</body>
+</html>

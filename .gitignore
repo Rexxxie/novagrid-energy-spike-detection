@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Build scratch directories used by the image builders
+06_linkedin/.build/
+06_linkedin/.poster/
+03_dashboard/.hero_*.html

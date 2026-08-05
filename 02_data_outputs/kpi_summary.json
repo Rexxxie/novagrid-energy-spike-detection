@@ -1,0 +1,83 @@
+{
+  "window": {
+    "start": "2024-01-01 00:00:00",
+    "end": "2024-01-07 23:31:12",
+    "days": 7,
+    "households": 20,
+    "meters": 20,
+    "regions": 5,
+    "readings": 6720,
+    "reading_interval_min": 28.8
+  },
+  "detection": {
+    "spikes": 114,
+    "spike_rate_pct": 1.7,
+    "households_affected": 20,
+    "false_positives": 1,
+    "false_negatives": 0,
+    "blind_reading_share_pct": 19.0,
+    "readings_above_observed_spike_ceiling_pct": 46.2,
+    "highest_spiking_baseline_kwh": 0.77,
+    "median_baseline_all_kwh": 0.74,
+    "median_baseline_spikes_kwh": 0.38,
+    "meter_ceiling_kwh": 1.44
+  },
+  "alerting": {
+    "alerts_sent": 111,
+    "alert_coverage_pct": 97.4,
+    "spikes_never_alerted": 3,
+    "median_latency_min": 14.4,
+    "p90_latency_min": 28.0,
+    "max_latency_min": 36.0,
+    "negative_latency_count": 6
+  },
+  "resolution": {
+    "resolved": 77,
+    "unresolved": 34,
+    "unknown": 3,
+    "resolution_rate_pct": 67.5
+  },
+  "waste": {
+    "excess_kwh_window": 23.15,
+    "excess_cost_window_gbp": 6.63,
+    "share_of_total_consumption_pct": 0.46,
+    "annual_kwh_per_household": 60.2,
+    "annual_gbp_per_household": 17.23,
+    "annual_gbp_fleet": 17226378.0,
+    "unit_rate_gbp_per_kwh": 0.2862,
+    "fleet_size_assumed": 1000000
+  },
+  "concentration": {
+    "top5_households_spike_share_pct": 38.6,
+    "fault_spikes": 63,
+    "behavioural_spikes": 51
+  },
+  "cleaning": {
+    "rows_raw": 6764,
+    "rows_dropped_blank": 1,
+    "rows_dropped_duplicate": 43,
+    "alert_time_unparsed": 0
+  },
+  "audit": {
+    "flagged": 114,
+    "rule_matches": 113,
+    "false_positives": [
+      "REC000015"
+    ],
+    "false_negatives": [],
+    "spikes_never_alerted": [
+      "REC000015",
+      "REC001414",
+      "REC004675"
+    ],
+    "alerts_on_non_spikes": 0,
+    "negative_latency": [
+      "REC000703",
+      "REC001340",
+      "REC001364",
+      "REC001931",
+      "REC004821",
+      "REC005650"
+    ]
+  }
+}
