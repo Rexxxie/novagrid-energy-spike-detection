@@ -12,9 +12,9 @@ data-quality audit, an audit of the client's own anomaly-detection rule, an inte
 dashboard built as a single self-contained HTML file, and a written report with
 recommendations.
 
-**Case study, not a live system.** The brief and dataset come from an Amdari case study of a
-fictional UK energy retailer. The customer names and email addresses in the extract are
-synthetic.
+**One of the projects I worked on while at Amdari.** The brief and dataset cover a fictional
+UK energy retailer, not a live system. The customer names and email addresses in the extract
+are synthetic.
 
 ![All charts](06_linkedin/all_charts_poster.png)
 
